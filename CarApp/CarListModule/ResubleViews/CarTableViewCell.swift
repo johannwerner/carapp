@@ -26,7 +26,7 @@ final class CarTableViewCell: UITableViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 }
 
@@ -57,7 +57,7 @@ private extension CarTableViewCell {
         contentView.addSubview(vehicleTitleLabel)
         vehicleTitleLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
         vehicleTitleLabel.autoAlignAxis(toSuperviewAxis: .vertical)
-        vehicleTitleLabel.text = "car_list_item_title".localizedString()
+        vehicleTitleLabel.text = "car_list_item_title".localizedString(CLMComments.vehicleCellTitle)
         vehicleTitleLabel.font = UIFont.systemFont(ofSize: 24)
         
         contentView.addSubview(licensePlateView)

@@ -1,5 +1,5 @@
 /// - Requires: 
-class MapViewUseCase {
+final class MapViewUseCase {
     
     // MARK: Dependencies
     private let interactor: MapViewInteractor

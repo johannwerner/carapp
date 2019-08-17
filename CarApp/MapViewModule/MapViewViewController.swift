@@ -4,7 +4,7 @@ import MapKit
 
 /// Show a map view
 /// - Requires: `RxSwift`, `RxCocoa`
-class MapViewViewController: UIViewController {
+final class MapViewViewController: UIViewController {
     
     // MARK: Dependencies
     private let viewModel: MapViewViewModel

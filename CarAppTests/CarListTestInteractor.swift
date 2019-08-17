@@ -7,13 +7,12 @@ final class CarListTestInteractor: CarListInteractor {
     
     
     // MARK: - Life cycle
-    
-    
-    // MARK: - Internal
-    
 }
 
 extension CarListTestInteractor {
+    
+    
+    // MARK: - Internal
     func getListOfCarsForLocation(location: String) -> Observable<Async<Any>> {
         let dictionary: [String : Any] = [
             "numberPlate": "HDE537EC",

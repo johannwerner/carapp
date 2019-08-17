@@ -1,10 +1,6 @@
 import RxSwift
 import RxAlamofire
 
-struct CarListConstants {
-    static let carListUrl = "https://car2go.now.sh/vehicles/%@"
-}
-
 /// Get a list of cars from outside source
 /// - Requires: `RxSwift`, `Async`, `RxAlamofire`, `NetworkLayer`
 final class CarListInteractorApi: CarListInteractor {
@@ -17,7 +13,9 @@ final class CarListInteractorApi: CarListInteractor {
     init(client: NetworkLayer) {
         self.client = client
     }
-    
+}
+
+extension CarListInteractorApi {
     // MARK: - Internal
     
     func getListOfCarsForLocation(location: String) -> Observable<Async<Any>> {
@@ -33,5 +31,3 @@ final class CarListInteractorApi: CarListInteractor {
         return result
     }
 }
-
-

@@ -4,14 +4,13 @@ import RxSwift
 
 /// Show a map view with pinned locations
 /// - Requires: `RxSwift`, `RxCocoa`
-class MapViewCoordinator {
+final class MapViewCoordinator {
 
     // MARK: Dependencies
     private let navigationController: UINavigationController
     private let configurator: MapViewConfigurator
     
     // MARK: Tooling
-    private let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
     

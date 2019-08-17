@@ -3,7 +3,7 @@ import RxSwift
 
 /// - Requires: `RxSwift`, `MvRx`, `RxCocoa`
 /// - Note: A view model can refer to one or more use cases.
-class MapViewViewModel {
+final class MapViewViewModel {
 
     // MARK: - Properties
     var position: Position

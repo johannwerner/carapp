@@ -12,7 +12,7 @@ final class LocationsListViewController: UIViewController {
     private let viewAction = PublishRelay<LocationsListViewAction>()
     
     // MARK: View components
-    private let tableView: UITableView
+    private let tableView = UITableView()
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
@@ -20,7 +20,6 @@ final class LocationsListViewController: UIViewController {
     
     init(viewModel: LocationsListViewModel) {
         self.viewModel = viewModel
-        tableView = UITableView()
         super.init(nibName: nil, bundle: nil)
     }
     

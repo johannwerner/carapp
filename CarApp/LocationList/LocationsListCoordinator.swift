@@ -10,7 +10,7 @@ final class LocationsListCoordinator {
     private let configurator: LocationsListConfigurator
     
     // MARK: Tooling
-    private let disposeBag = DisposeBag()
+  
     
     // MARK: - Life cycle
     

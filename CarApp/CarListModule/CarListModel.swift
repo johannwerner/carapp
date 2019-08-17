@@ -1,11 +1,4 @@
 import RxCocoa
-/// View state structure for CarList.
-struct CarListViewState: Equatable {
-    
-    static var initial: CarListViewState {
-        return CarListViewState()
-    }
-}
 
 /// Operation status enum for CarList.
 enum CarListStatus {
@@ -22,4 +15,12 @@ enum CarListViewEffect {
 /// View action enum for CarList.
 enum CarListViewAction {
     case selectedIndex(atIndex: Int)
+}
+
+struct CarListConstants {
+    static let carListUrl = "https://car2go.now.sh/vehicles/%@"
+}
+
+struct CLMComments {
+    static let vehicleCellTitle = "Title of vehicle information in a list of vehicles."
 }

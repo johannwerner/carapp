@@ -10,7 +10,7 @@ final class CarListCoordinator {
     private let configurator: CarListConfigurator
     
     // MARK: Tooling
-    private let disposeBag = DisposeBag()
+    
 
     // MARK: - Life cycle
     

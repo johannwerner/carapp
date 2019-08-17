@@ -1,10 +1,3 @@
-/// View state structure for LocationsList.
-struct LocationsListViewState: Equatable {
-    
-    static var initial: LocationsListViewState {
-        return LocationsListViewState()
-    }
-}
 
 /// Operation status enum for LocationsList.
 enum LocationsListStatus {

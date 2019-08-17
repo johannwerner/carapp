@@ -1,3 +1,3 @@
 ///
 /// - Requires:
-class MapViewInteractorApi: MapViewInteractor {}
+final class MapViewInteractorApi: MapViewInteractor {}

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D08343B8AF355143F139E21 /* Pods_CarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */; };
 		9334C0802306F83D00F21977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C07F2306F83D00F21977 /* AppDelegate.swift */; };
-		9334C0822306F83D00F21977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0812306F83D00F21977 /* ViewController.swift */; };
 		9334C0872306F83E00F21977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0862306F83E00F21977 /* Assets.xcassets */; };
 		9334C08A2306F83E00F21977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0882306F83E00F21977 /* LaunchScreen.storyboard */; };
 		9334C0952306F83E00F21977 /* CarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0942306F83E00F21977 /* CarAppTests.swift */; };
@@ -42,13 +41,12 @@
 		9334C0EE2306FA0B00F21977 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C02306FA0B00F21977 /* MapViewModel.swift */; };
 		9334C0EF2306FA0B00F21977 /* MapViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C12306FA0B00F21977 /* MapViewConfigurator.swift */; };
 		9334C0F02306FA0B00F21977 /* NSObject+CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C32306FA0B00F21977 /* NSObject+CarApp.swift */; };
-		9334C0F12306FA0B00F21977 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C42306FA0B00F21977 /* Constants.swift */; };
 		9334C0F22306FA0B00F21977 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C62306FA0B00F21977 /* Position.swift */; };
 		9334C0F32306FA0B00F21977 /* Decodable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C82306FA0B00F21977 /* Decodable+Utils.swift */; };
 		9334C0F42306FA0B00F21977 /* String+CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0C92306FA0B00F21977 /* String+CarApp.swift */; };
 		9334C0F52306FA0B00F21977 /* Array+CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0CA2306FA0B00F21977 /* Array+CarApp.swift */; };
 		9334C0F62306FA0B00F21977 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0CC2306FA0B00F21977 /* CircleView.swift */; };
-		9334C0F72306FA0B00F21977 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0CD2306FA0B00F21977 /* Localizable.strings */; };
+		9334C0F72306FA0B00F21977 /* CarAppLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0CD2306FA0B00F21977 /* CarAppLocalizable.strings */; };
 		9334C0F82306FA0B00F21977 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0CE2306FA0B00F21977 /* ColorTheme.swift */; };
 		9334C0F92306FA0B00F21977 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D02306FA0B00F21977 /* Async.swift */; };
 		9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D12306FA0B00F21977 /* ObservableType.swift */; };
@@ -73,7 +71,6 @@
 		798A147854C701D34FD2C115 /* Pods_CarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9334C07C2306F83D00F21977 /* CarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9334C07F2306F83D00F21977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9334C0812306F83D00F21977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9334C0862306F83E00F21977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9334C0892306F83E00F21977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9334C08B2306F83E00F21977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,13 +106,12 @@
 		9334C0C02306FA0B00F21977 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9334C0C12306FA0B00F21977 /* MapViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewConfigurator.swift; sourceTree = "<group>"; };
 		9334C0C32306FA0B00F21977 /* NSObject+CarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CarApp.swift"; sourceTree = "<group>"; };
-		9334C0C42306FA0B00F21977 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9334C0C62306FA0B00F21977 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		9334C0C82306FA0B00F21977 /* Decodable+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Utils.swift"; sourceTree = "<group>"; };
 		9334C0C92306FA0B00F21977 /* String+CarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CarApp.swift"; sourceTree = "<group>"; };
 		9334C0CA2306FA0B00F21977 /* Array+CarApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+CarApp.swift"; sourceTree = "<group>"; };
 		9334C0CC2306FA0B00F21977 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		9334C0CD2306FA0B00F21977 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9334C0CD2306FA0B00F21977 /* CarAppLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = CarAppLocalizable.strings; sourceTree = "<group>"; };
 		9334C0CE2306FA0B00F21977 /* ColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		9334C0D02306FA0B00F21977 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		9334C0D12306FA0B00F21977 /* ObservableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
@@ -189,16 +185,12 @@
 		9334C07E2306F83D00F21977 /* CarApp */ = {
 			isa = PBXGroup;
 			children = (
-				9334C09F2306FA0B00F21977 /* CarListModule */,
 				9334C0AC2306FA0B00F21977 /* LocationList */,
+				9334C09F2306FA0B00F21977 /* CarListModule */,
 				9334C0B92306FA0B00F21977 /* MapViewModule */,
 				9334C0D22306FA0B00F21977 /* NetworkLayer */,
 				9334C0C22306FA0B00F21977 /* SuportingFiles */,
 				9334C07F2306F83D00F21977 /* AppDelegate.swift */,
-				9334C0812306F83D00F21977 /* ViewController.swift */,
-				9334C0862306F83E00F21977 /* Assets.xcassets */,
-				9334C0882306F83E00F21977 /* LaunchScreen.storyboard */,
-				9334C08B2306F83E00F21977 /* Info.plist */,
 			);
 			path = CarApp;
 			sourceTree = "<group>";
@@ -216,16 +208,16 @@
 		9334C09F2306FA0B00F21977 /* CarListModule */ = {
 			isa = PBXGroup;
 			children = (
-				9334C0A02306FA0B00F21977 /* CarListInteractor.swift */,
-				9334C0A12306FA0B00F21977 /* CarListViewModel.swift */,
-				9334C0A22306FA0B00F21977 /* CarListViewController.swift */,
-				9334C0A32306FA0B00F21977 /* CarListCoordinator.swift */,
 				9334C0A42306FA0B00F21977 /* Models */,
-				9334C0A62306FA0B00F21977 /* CarListInteractorApi.swift */,
+				9334C0AA2306FA0B00F21977 /* ResubleViews */,
+				9334C0A22306FA0B00F21977 /* CarListViewController.swift */,
+				9334C0A12306FA0B00F21977 /* CarListViewModel.swift */,
+				9334C0A92306FA0B00F21977 /* CarListUseCase.swift */,
 				9334C0A72306FA0B00F21977 /* CarListModel.swift */,
 				9334C0A82306FA0B00F21977 /* CarListConfigurator.swift */,
-				9334C0A92306FA0B00F21977 /* CarListUseCase.swift */,
-				9334C0AA2306FA0B00F21977 /* ResubleViews */,
+				9334C0A62306FA0B00F21977 /* CarListInteractorApi.swift */,
+				9334C0A02306FA0B00F21977 /* CarListInteractor.swift */,
+				9334C0A32306FA0B00F21977 /* CarListCoordinator.swift */,
 			);
 			path = CarListModule;
 			sourceTree = "<group>";
@@ -249,16 +241,16 @@
 		9334C0AC2306FA0B00F21977 /* LocationList */ = {
 			isa = PBXGroup;
 			children = (
-				9334C0AD2306FA0B00F21977 /* LocationsListConfigurator.swift */,
-				9334C0AE2306FA0B00F21977 /* LocationsListUseCase.swift */,
-				9334C0AF2306FA0B00F21977 /* LocationsListViewController.swift */,
-				9334C0B02306FA0B00F21977 /* LocationsListInteractor.swift */,
-				9334C0B12306FA0B00F21977 /* LocationsListInteractorApi.swift */,
 				9334C0B22306FA0B00F21977 /* Models */,
-				9334C0B42306FA0B00F21977 /* LocationsListCoordinator.swift */,
-				9334C0B52306FA0B00F21977 /* LocationsListViewModel.swift */,
-				9334C0B62306FA0B00F21977 /* LocationsListModel.swift */,
 				9334C0B72306FA0B00F21977 /* ReusableViews */,
+				9334C0AF2306FA0B00F21977 /* LocationsListViewController.swift */,
+				9334C0B52306FA0B00F21977 /* LocationsListViewModel.swift */,
+				9334C0AE2306FA0B00F21977 /* LocationsListUseCase.swift */,
+				9334C0B62306FA0B00F21977 /* LocationsListModel.swift */,
+				9334C0AD2306FA0B00F21977 /* LocationsListConfigurator.swift */,
+				9334C0B12306FA0B00F21977 /* LocationsListInteractorApi.swift */,
+				9334C0B02306FA0B00F21977 /* LocationsListInteractor.swift */,
+				9334C0B42306FA0B00F21977 /* LocationsListCoordinator.swift */,
 			);
 			path = LocationList;
 			sourceTree = "<group>";
@@ -284,12 +276,12 @@
 			children = (
 				9334C0BA2306FA0B00F21977 /* MapViewViewController.swift */,
 				9334C0BB2306FA0B00F21977 /* MapViewViewModel.swift */,
-				9334C0BC2306FA0B00F21977 /* MapViewInteractorApi.swift */,
-				9334C0BD2306FA0B00F21977 /* MapViewInteractor.swift */,
 				9334C0BE2306FA0B00F21977 /* MapViewUseCase.swift */,
-				9334C0BF2306FA0B00F21977 /* MapViewCoordinator.swift */,
 				9334C0C02306FA0B00F21977 /* MapViewModel.swift */,
 				9334C0C12306FA0B00F21977 /* MapViewConfigurator.swift */,
+				9334C0BC2306FA0B00F21977 /* MapViewInteractorApi.swift */,
+				9334C0BD2306FA0B00F21977 /* MapViewInteractor.swift */,
+				9334C0BF2306FA0B00F21977 /* MapViewCoordinator.swift */,
 			);
 			path = MapViewModule;
 			sourceTree = "<group>";
@@ -297,12 +289,14 @@
 		9334C0C22306FA0B00F21977 /* SuportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				9334C0862306F83E00F21977 /* Assets.xcassets */,
+				9334C0882306F83E00F21977 /* LaunchScreen.storyboard */,
+				9334C08B2306F83E00F21977 /* Info.plist */,
 				9334C0C32306FA0B00F21977 /* NSObject+CarApp.swift */,
-				9334C0C42306FA0B00F21977 /* Constants.swift */,
 				9334C0C52306FA0B00F21977 /* SharedModels */,
 				9334C0C72306FA0B00F21977 /* Foundation */,
 				9334C0CB2306FA0B00F21977 /* SharedViews */,
-				9334C0CD2306FA0B00F21977 /* Localizable.strings */,
+				9334C0CD2306FA0B00F21977 /* CarAppLocalizable.strings */,
 				9334C0CE2306FA0B00F21977 /* ColorTheme.swift */,
 				9334C0CF2306FA0B00F21977 /* MvRx */,
 				9334C0D02306FA0B00F21977 /* Async.swift */,
@@ -437,7 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9334C08A2306F83E00F21977 /* LaunchScreen.storyboard in Resources */,
-				9334C0F72306FA0B00F21977 /* Localizable.strings in Resources */,
+				9334C0F72306FA0B00F21977 /* CarAppLocalizable.strings in Resources */,
 				9334C0872306F83E00F21977 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,14 +514,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9334C0822306F83D00F21977 /* ViewController.swift in Sources */,
 				9334C0D82306FA0B00F21977 /* CarModel.swift in Sources */,
 				9334C0E42306FA0B00F21977 /* LocationsListCoordinator.swift in Sources */,
 				9334C0DD2306FA0B00F21977 /* CarTableViewCell.swift in Sources */,
 				9334C0D72306FA0B00F21977 /* CarListCoordinator.swift in Sources */,
 				9334C0E32306FA0B00F21977 /* LocationModel.swift in Sources */,
 				9334C0E92306FA0B00F21977 /* MapViewViewModel.swift in Sources */,
-				9334C0F12306FA0B00F21977 /* Constants.swift in Sources */,
 				9334C0E02306FA0B00F21977 /* LocationsListViewController.swift in Sources */,
 				9334C0E52306FA0B00F21977 /* LocationsListViewModel.swift in Sources */,
 				9334C0E72306FA0B00F21977 /* LocationTableViewCell.swift in Sources */,
@@ -717,7 +709,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CarApp/Info.plist;
+				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -735,7 +728,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CarApp/Info.plist;
+				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,7 +1,7 @@
 import RxCocoa
 import RxSwift
 
-class MapViewConfigurator {
+final class MapViewConfigurator {
     
     // MARK: Dependencies
     

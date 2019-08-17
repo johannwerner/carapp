@@ -1,10 +1,3 @@
-/// View state structure for MapView.
-struct MapViewViewState: Equatable {
-    static var initial: MapViewViewState {
-        return MapViewViewState()
-    }
-}
-
 /// Operation status enum for MapView.
 enum MapViewStatus {
     case someStatus

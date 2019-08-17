@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct CarModel: Codable, Equatable {
     //TODO: Not really neccesary can be removed
     static func == (lhs: CarModel, rhs: CarModel) -> Bool {
@@ -27,7 +26,7 @@ struct CarModel: Codable, Equatable {
             return "car_list_item_tank_empty".localizedString()
         }
         let fuelDouble = fuel*100
-        let finalString = String(format:  "car_list_item_tank_status".localizedString(), fuelDouble)
+        let finalString = String(format: "car_list_item_tank_status".localizedString(), fuelDouble)
         return finalString
     }
 }

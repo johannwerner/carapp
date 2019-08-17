@@ -30,7 +30,7 @@ class CarAppTests: XCTestCase {
 }
 
 extension CarAppTests {
-    func testParsingOfCars() {
+    func test_parsingOfCars_licensePlate() {
         //Given
         let result = self.useCase.getCarListForLocation()
             .subscribe(onNext: { status in
@@ -40,9 +40,9 @@ extension CarAppTests {
                 case .error:
                     break
                 case .success(let carListStatus):
-                    //When
+        //When
                     let carModel = carListStatus.first!
-                    //Then
+        //Then
                     XCTAssertEqual(carModel.numberPlate, "HDE537EC")
                 }
                 
