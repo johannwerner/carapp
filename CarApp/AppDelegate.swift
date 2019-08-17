@@ -23,9 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.window?.rootViewController = navigationController
         
-        let configurator = LocationsListConfigurator(locationsListInteractor: LocationsListInteractorApi(client: NetworkLayer()))
-        let coordinator = LocationsListCoordinator(navigationController: navigationController, configurator: configurator)
-        coordinator.showLocationList(animated: true)
+        let interactor = IntroductionModuleInteractorApi()
+        let configurator = IntroductionModuleConfigurator(introductionModuleInteractor: interactor)
+        let coordinator = IntroductionModuleCoordinator(
+            navigationController: navigationController,
+            configurator: configurator
+        )
+        coordinator.showIntroduction(animated: true)
         return true
     }
 

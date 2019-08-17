@@ -1,28 +1,27 @@
 import RxCocoa
 import RxSwift
 
-/// <#Brief description of the purpose of the view model#>
-/// - Requires: `RxSwift`, `MvRx`
+///
+/// - Requires: `RxSwift`,
 /// - Note: A view model can refer to one or more use cases.
-class IntoductionModuleViewModel: MvRxViewModel {
+final class  IntroductionModuleViewModel {
 
     // MARK: MvRx
-    let viewState = MvRxViewState<IntoductionModuleViewState>(initialState: IntoductionModuleViewState.initial)
-    let viewEffect = PublishRelay<IntoductionModuleViewEffect>()
+    let viewEffect = PublishRelay< IntroductionModuleViewEffect>()
     
     // MARK: Dependencies
-    private let coordinator: IntoductionModuleCoordinator
-    private let useCase: IntoductionModuleUseCase
+    private let coordinator:  IntroductionModuleCoordinator
+    private let useCase:  IntroductionModuleUseCase
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
     
-    init(coordinator: IntoductionModuleCoordinator,
-         configurator: IntoductionModuleConfigurator) {
+    init(coordinator:  IntroductionModuleCoordinator,
+         configurator:  IntroductionModuleConfigurator) {
         self.coordinator = coordinator
-        self.useCase = IntoductionModuleUseCase(interactor: IntoductionModuleInteractor)
+        self.useCase =  IntroductionModuleUseCase(interactor:  IntroductionModuleInteractorApi())
         
         observeViewEffect()
     }
@@ -30,15 +29,15 @@ class IntoductionModuleViewModel: MvRxViewModel {
 
 // MARK: - Public functions
 
-extension IntoductionModuleViewModel {
+extension  IntroductionModuleViewModel {
     
-    func bind(to viewAction: PublishRelay<IntoductionModuleViewAction>) {
+    func bind(to viewAction: PublishRelay< IntroductionModuleViewAction>) {
         viewAction
             .asObservable()
             .subscribe(onNext: { [unowned self] viewAction in
                 switch viewAction {
-                case .someAction:
-                    self.doSomething()
+                case .primaryButtonPressed:
+                    self.showLocationView()
                 }
             })
             .disposed(by: disposeBag)
@@ -47,34 +46,24 @@ extension IntoductionModuleViewModel {
 
 // MARK: - Private functions
 
-private extension IntoductionModuleViewModel {
+private extension  IntroductionModuleViewModel {
     
-    func doSomething() {
-        self.useCase.verifySomething(<#Pass some input value#>)
-            .subscribe(onNext: { [unowned self] status in
-                switch status {
-                case .someStatus:
-                    self.viewEffect.accept(.someEffect)
-                }
-            })
-            .disposed(by: disposeBag)
+    func showLocationView() {
+        coordinator.showLocationList(animated: true)
     }
 }
 
 // MARK: - Rx
 
-private extension IntoductionModuleViewModel {
+private extension  IntroductionModuleViewModel {
     
     /// - Note: Privately observing view effects in the view model is meant to make the association between a specific effect and certain view states easier.
-    private func observeViewEffect() {
+    func observeViewEffect() {
         viewEffect
             .asObservable()
-            .subscribe(onNext: { [unowned self] effect in
+            .subscribe(onNext: { effect in
                 switch effect {
-                case .someEffect:
-                    self.viewState.set {
-                        <#Perform view state changes#>
-                    }
+                case .success: break
                 }
             })
             .disposed(by: disposeBag)

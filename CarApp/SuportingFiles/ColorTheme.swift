@@ -20,6 +20,10 @@ extension ColorTheme {
     static var circleDotBackground: UIColor {
         return ColorTheme.colorWith(red: 175, green: 175, blue: 175)
     }
+    
+    static var primaryAppColor: UIColor {
+        return ColorTheme.colorWith(red: 101, green: 179, blue: 239)
+    }
 }
 
 private extension ColorTheme {

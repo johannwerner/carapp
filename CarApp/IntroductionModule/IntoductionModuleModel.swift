@@ -1,26 +1,18 @@
-/// View state structure for IntoductionModule.
-struct IntoductionModuleViewState: Equatable {
-    
-    var isSomeButtonHidden: Bool
-    
-    static var initial: IntoductionModuleViewState {
-        return IntoductionModuleViewState(
-            isSomeButtonHidden: true
-        )
-    }
-}
-
-/// Operation status enum for IntoductionModule.
-enum IntoductionModuleStatus {
+/// Operation status enum for  IntroductionModule.
+enum  IntroductionModuleStatus {
     case someStatus
 }
 
-/// View effect enum for IntoductionModule.
-enum IntoductionModuleViewEffect {
-    case someEffect
+/// View effect enum for  IntroductionModule.
+enum  IntroductionModuleViewEffect {
+    case success
 }
 
-/// View action enum for IntoductionModule.
-enum IntoductionModuleViewAction {
-    case someAction
+/// View action enum for  IntroductionModule.
+enum  IntroductionModuleViewAction {
+    case primaryButtonPressed
+}
+
+struct IntroductionConstants {
+    static let titleLabelText = "Johann Werner"
 }

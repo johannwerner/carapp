@@ -1,25 +1,27 @@
 import RxSwift
 import RxCocoa
 
-/// <#Brief description of the purpose of the view controller#>
+/// An introduction to my coding challenge
 /// - Requires: `RxSwift`
-class IntoductionModuleViewController: UIViewController {
+class  IntroductionModuleViewController: UIViewController {
     
     // MARK: Dependencies
-    private let viewModel: IntoductionModuleViewModel
+    private let viewModel:  IntroductionModuleViewModel
     
     // MARK: Rx
-    private let viewAction = PublishRelay<IntoductionModuleViewAction>()
+    private let viewAction = PublishRelay< IntroductionModuleViewAction>()
     
     // MARK: View components
-    private let someButton: UIButton
+    private let primaryButton = UIButton()
+    private let titleLabel = UILabel()
+    private let subtitleLabel = UILabel()
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
     
-    init(viewModel: IntoductionModuleViewModel) {
+    init(viewModel:  IntroductionModuleViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,6 +32,7 @@ class IntoductionModuleViewController: UIViewController {
 
     override func loadView() {
         view = UIView()
+        view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
@@ -38,50 +41,74 @@ class IntoductionModuleViewController: UIViewController {
         setUpViews()
         setUpBinding()
         
-        observeViewState()
         observeViewEffect()
     }
 }
 
 // MARK: - Setup
 
-private extension IntoductionModuleViewController {
+private extension  IntroductionModuleViewController {
 
     /// Initializes and configures components in controller.
     func setUpViews() {
-        <#Initialize and configure components here#>
+        setUpNextButton()
+        setUpTitleLable()
+        setUpSubtitleLable()
+    }
+    
+    func setUpNextButton() {
+        view.addSubview(primaryButton)
+        primaryButton.autoAlignAxis(toSuperviewAxis: .vertical)
+        primaryButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: 50)
+        primaryButton.autoSetDimension(.height, toSize: 50)
+        primaryButton.autoSetDimension(.width, toSize: 200, relation: .greaterThanOrEqual)
+        primaryButton.layer.cornerRadius = 4.0
+        
+        primaryButton.backgroundColor = ColorTheme.primaryAppColor
+        primaryButton.setTitle(
+            "introduction_primary_button".localizedString(),
+            for: .normal
+        )
+        primaryButton.rx.tap.subscribe(onNext: { [unowned self] _ in
+            self.viewAction.accept(.primaryButtonPressed)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    func setUpTitleLable() {
+        view.addSubview(titleLabel)
+        titleLabel.autoCenterInSuperview()
+        titleLabel.font = UIFont.systemFont(ofSize: 21)
+        titleLabel.text = IntroductionConstants.titleLabelText
+    }
+    
+    /// - Requires: setUpTitleLable to be called first
+    func setUpSubtitleLable() {
+        view.addSubview(subtitleLabel)
+        subtitleLabel.autoAlignAxis(toSuperviewAxis: .vertical)
+        subtitleLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 17)
+        subtitleLabel.font = UIFont.systemFont(ofSize: 17)
+        subtitleLabel.text = "introduction_sub_title".localizedString()
     }
     
     /// Binds controller user events to view model.
     func setUpBinding() {
-        viewModel.bind(to: IntoductionModuleViewAction)
+        viewModel.bind(to: viewAction)
     }
 }
 
 // MARK: - Rx
 
-private extension IntoductionModuleViewController {
-
-    /// Starts observing view state changes of all components in controller to upadte them accordingly.
-    func observeViewState() {
-        viewModel
-            .stateOf { $0.isSomeButtonHidden }
-            .bind { [unowned self] isHidden in
-                self.someButton.isHidden = isHidden
-            }
-            .disposed(by: disposeBag)
-    }
+private extension  IntroductionModuleViewController {
     
     /// Starts observing view effects to react accordingly.
     func observeViewEffect() {
         viewModel
-            .viewEffect
-            .subscribe(onNext: { [unowned self] effect in
-                switch effect {
-                case .someEffect:
-                    <#Do something#>
-                }
-            })
-            .disposed(by: disposeBag)
-    }
+        .viewEffect
+        .subscribe(onNext: { effect in
+            switch effect {
+            case .success:break
+            }
+        })
+        .disposed(by: disposeBag)}
 }

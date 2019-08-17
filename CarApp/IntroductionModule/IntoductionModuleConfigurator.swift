@@ -1,9 +1,12 @@
 import RxCocoa
 import RxSwift
 
-class IntoductionModuleConfigurator {
+class  IntroductionModuleConfigurator {
     
     // MARK: Dependencies
     
-    let IntoductionModuleInteractor: IntoductionModuleInteractor
+    let  introductionModuleInteractor:  IntroductionModuleInteractor
+    init(introductionModuleInteractor:  IntroductionModuleInteractor) {
+        self.introductionModuleInteractor = introductionModuleInteractor
+    }
 }

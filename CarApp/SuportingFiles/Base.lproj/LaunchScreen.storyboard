@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Code Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-zb-lPA">
-                                <rect key="frame" x="130.5" y="482.5" width="153" height="21"/>
+                                <rect key="frame" x="130.5" y="483" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                         <constraints>
                             <constraint firstItem="qhc-kO-8e7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CRZ-pb-oZj"/>
                             <constraint firstItem="qhc-kO-8e7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Cac-5q-KZP"/>
-                            <constraint firstItem="1Ii-zb-lPA" firstAttribute="top" secondItem="qhc-kO-8e7" secondAttribute="bottom" constant="16.5" id="WTj-AR-FEJ"/>
+                            <constraint firstItem="1Ii-zb-lPA" firstAttribute="top" secondItem="qhc-kO-8e7" secondAttribute="bottom" constant="17" id="WTj-AR-FEJ"/>
                             <constraint firstItem="1Ii-zb-lPA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fyl-6H-B4G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

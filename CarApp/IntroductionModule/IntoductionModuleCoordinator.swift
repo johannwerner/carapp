@@ -4,18 +4,18 @@ import RxSwift
 
 /// <#Brief description of the purpose of the coordinator#>
 /// - Requires: `RxSwift`
-class IntoductionModuleCoordinator {
+class  IntroductionModuleCoordinator {
 
     // MARK: Dependencies
     private let navigationController: UINavigationController
-    private let configurator: IntoductionModuleConfigurator
+    private let configurator:  IntroductionModuleConfigurator
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
     
-    init(navigationController: UINavigationController, configurator: IntoductionModuleConfigurator) {
+    init(navigationController: UINavigationController, configurator:  IntroductionModuleConfigurator) {
         self.navigationController = navigationController
         self.configurator = configurator
     }
@@ -23,20 +23,22 @@ class IntoductionModuleCoordinator {
 
 // MARK: - Navigation IN
 
-extension IntoductionModuleCoordinator {
+extension  IntroductionModuleCoordinator {
     
-    func showSomething(animated: Bool) {
-        let viewModel = IntoductionModuleViewModel(coordinator: self, configurator: configurator)
-        let viewController = IntoductionModuleViewController(viewModel: viewModel)
+    func showIntroduction(animated: Bool) {
+        let viewModel =  IntroductionModuleViewModel(coordinator: self, configurator: configurator)
+        let viewController =  IntroductionModuleViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: animated)
     }
 }
 
 // MARK: - Navigation OUT
 
-extension IntoductionModuleCoordinator {
+extension  IntroductionModuleCoordinator {
 
-    func dismissSomething(animated: Bool) {
-        <#Implement navigation to another module#>
+    func showLocationList(animated: Bool) {
+        let configurator = LocationsListConfigurator(locationsListInteractor: LocationsListInteractorApi(client: NetworkLayer()))
+        let coordinator = LocationsListCoordinator(navigationController: navigationController, configurator: configurator)
+        coordinator.showLocationList(animated: true)
     }
 }

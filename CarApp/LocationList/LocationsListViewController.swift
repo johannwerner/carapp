@@ -38,7 +38,6 @@ final class LocationsListViewController: UIViewController {
         setUpViews()
         setUpBinding()
         
-        observeViewState()
         observeViewEffect()
     }
     
@@ -74,9 +73,6 @@ private extension LocationsListViewController {
 // MARK: - Rx
 
 private extension LocationsListViewController {
-    
-    /// Starts observing view state changes of all components in controller to upadte them accordingly.
-    func observeViewState() {}
     
     /// Starts observing view effects to react accordingly.
     func observeViewEffect() {

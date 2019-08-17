@@ -1,7 +1,7 @@
 import RxCocoa
 import RxSwift
 
-/// - Requires: `RxSwift`, `MvRx`, `RxCocoa`
+/// - Requires: `RxSwift`, , `RxCocoa`
 /// - Note: A view model can refer to one or more use cases.
 final class CarListViewModel {
     // MARK: - Properties

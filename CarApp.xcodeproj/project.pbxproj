@@ -52,6 +52,14 @@
 		9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D12306FA0B00F21977 /* ObservableType.swift */; };
 		9334C0FB2306FA0B00F21977 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D32306FA0B00F21977 /* NetworkLayer.swift */; };
 		9334C0FD2306FAE700F21977 /* CarListTestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0FC2306FAE700F21977 /* CarListTestInteractor.swift */; };
+		9334C10923080BF300F21977 /* IntoductionModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10123080BF300F21977 /* IntoductionModuleCoordinator.swift */; };
+		9334C10A23080BF300F21977 /* IntoductionModuleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10223080BF300F21977 /* IntoductionModuleUseCase.swift */; };
+		9334C10B23080BF300F21977 /* IntoductionModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10323080BF300F21977 /* IntoductionModuleViewController.swift */; };
+		9334C10C23080BF300F21977 /* IntoductionModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10423080BF300F21977 /* IntoductionModuleInteractor.swift */; };
+		9334C10D23080BF300F21977 /* IntoductionModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10523080BF300F21977 /* IntoductionModuleModel.swift */; };
+		9334C10E23080BF300F21977 /* IntoductionModuleInteractorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10623080BF300F21977 /* IntoductionModuleInteractorApi.swift */; };
+		9334C10F23080BF300F21977 /* IntoductionModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10723080BF300F21977 /* IntoductionModuleViewModel.swift */; };
+		9334C11023080BF300F21977 /* IntoductionModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10823080BF300F21977 /* IntoductionModuleConfigurator.swift */; };
 		9984AD252B5CA3E846938DA6 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A147854C701D34FD2C115 /* Pods_CarApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +125,14 @@
 		9334C0D12306FA0B00F21977 /* ObservableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
 		9334C0D32306FA0B00F21977 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		9334C0FC2306FAE700F21977 /* CarListTestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTestInteractor.swift; sourceTree = "<group>"; };
+		9334C10123080BF300F21977 /* IntoductionModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleCoordinator.swift; sourceTree = "<group>"; };
+		9334C10223080BF300F21977 /* IntoductionModuleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleUseCase.swift; sourceTree = "<group>"; };
+		9334C10323080BF300F21977 /* IntoductionModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleViewController.swift; sourceTree = "<group>"; };
+		9334C10423080BF300F21977 /* IntoductionModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleInteractor.swift; sourceTree = "<group>"; };
+		9334C10523080BF300F21977 /* IntoductionModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleModel.swift; sourceTree = "<group>"; };
+		9334C10623080BF300F21977 /* IntoductionModuleInteractorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleInteractorApi.swift; sourceTree = "<group>"; };
+		9334C10723080BF300F21977 /* IntoductionModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleViewModel.swift; sourceTree = "<group>"; };
+		9334C10823080BF300F21977 /* IntoductionModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleConfigurator.swift; sourceTree = "<group>"; };
 		A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE0C49055AE8D601007A43 /* Pods-CarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9ACD01FAB8862E5E7B3BED8 /* Pods-CarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.debug.xcconfig"; path = "Target Support Files/Pods-CarApp/Pods-CarApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +201,7 @@
 		9334C07E2306F83D00F21977 /* CarApp */ = {
 			isa = PBXGroup;
 			children = (
+				9334C10023080B9200F21977 /* IntroductionModule */,
 				9334C0AC2306FA0B00F21977 /* LocationList */,
 				9334C09F2306FA0B00F21977 /* CarListModule */,
 				9334C0B92306FA0B00F21977 /* MapViewModule */,
@@ -344,6 +361,21 @@
 				9334C0D32306FA0B00F21977 /* NetworkLayer.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		9334C10023080B9200F21977 /* IntroductionModule */ = {
+			isa = PBXGroup;
+			children = (
+				9334C10323080BF300F21977 /* IntoductionModuleViewController.swift */,
+				9334C10723080BF300F21977 /* IntoductionModuleViewModel.swift */,
+				9334C10223080BF300F21977 /* IntoductionModuleUseCase.swift */,
+				9334C10523080BF300F21977 /* IntoductionModuleModel.swift */,
+				9334C10423080BF300F21977 /* IntoductionModuleInteractor.swift */,
+				9334C10623080BF300F21977 /* IntoductionModuleInteractorApi.swift */,
+				9334C10823080BF300F21977 /* IntoductionModuleConfigurator.swift */,
+				9334C10123080BF300F21977 /* IntoductionModuleCoordinator.swift */,
+			);
+			path = IntroductionModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,7 +547,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9334C0D82306FA0B00F21977 /* CarModel.swift in Sources */,
+				9334C10E23080BF300F21977 /* IntoductionModuleInteractorApi.swift in Sources */,
+				9334C10B23080BF300F21977 /* IntoductionModuleViewController.swift in Sources */,
 				9334C0E42306FA0B00F21977 /* LocationsListCoordinator.swift in Sources */,
+				9334C10F23080BF300F21977 /* IntoductionModuleViewModel.swift in Sources */,
 				9334C0DD2306FA0B00F21977 /* CarTableViewCell.swift in Sources */,
 				9334C0D72306FA0B00F21977 /* CarListCoordinator.swift in Sources */,
 				9334C0E32306FA0B00F21977 /* LocationModel.swift in Sources */,
@@ -524,6 +559,7 @@
 				9334C0E52306FA0B00F21977 /* LocationsListViewModel.swift in Sources */,
 				9334C0E72306FA0B00F21977 /* LocationTableViewCell.swift in Sources */,
 				9334C0F22306FA0B00F21977 /* Position.swift in Sources */,
+				9334C11023080BF300F21977 /* IntoductionModuleConfigurator.swift in Sources */,
 				9334C0F02306FA0B00F21977 /* NSObject+CarApp.swift in Sources */,
 				9334C0D62306FA0B00F21977 /* CarListViewController.swift in Sources */,
 				9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */,
@@ -531,8 +567,10 @@
 				9334C0F52306FA0B00F21977 /* Array+CarApp.swift in Sources */,
 				9334C0D92306FA0B00F21977 /* CarListInteractorApi.swift in Sources */,
 				9334C0D42306FA0B00F21977 /* CarListInteractor.swift in Sources */,
+				9334C10D23080BF300F21977 /* IntoductionModuleModel.swift in Sources */,
 				9334C0F42306FA0B00F21977 /* String+CarApp.swift in Sources */,
 				9334C0DE2306FA0B00F21977 /* LocationsListConfigurator.swift in Sources */,
+				9334C10923080BF300F21977 /* IntoductionModuleCoordinator.swift in Sources */,
 				9334C0F32306FA0B00F21977 /* Decodable+Utils.swift in Sources */,
 				9334C0EF2306FA0B00F21977 /* MapViewConfigurator.swift in Sources */,
 				9334C0EB2306FA0B00F21977 /* MapViewInteractor.swift in Sources */,
@@ -544,12 +582,14 @@
 				9334C0EA2306FA0B00F21977 /* MapViewInteractorApi.swift in Sources */,
 				9334C0802306F83D00F21977 /* AppDelegate.swift in Sources */,
 				9334C0D52306FA0B00F21977 /* CarListViewModel.swift in Sources */,
+				9334C10C23080BF300F21977 /* IntoductionModuleInteractor.swift in Sources */,
 				9334C0E12306FA0B00F21977 /* LocationsListInteractor.swift in Sources */,
 				9334C0F62306FA0B00F21977 /* CircleView.swift in Sources */,
 				9334C0DF2306FA0B00F21977 /* LocationsListUseCase.swift in Sources */,
 				9334C0E82306FA0B00F21977 /* MapViewViewController.swift in Sources */,
 				9334C0DA2306FA0B00F21977 /* CarListModel.swift in Sources */,
 				9334C0EC2306FA0B00F21977 /* MapViewUseCase.swift in Sources */,
+				9334C10A23080BF300F21977 /* IntoductionModuleUseCase.swift in Sources */,
 				9334C0E62306FA0B00F21977 /* LocationsListModel.swift in Sources */,
 				9334C0DB2306FA0B00F21977 /* CarListConfigurator.swift in Sources */,
 				9334C0DC2306FA0B00F21977 /* CarListUseCase.swift in Sources */,
