@@ -31,7 +31,9 @@ extension CarListUseCase {
                 case .loading:
                     return .loading
                 case .success(let data):
-                    let listOfArray = data as! Array<Dictionary<String, Any>> //Should probably return error here rather than force cast
+                  guard let listOfArray = data as? Array<Dictionary<String, Any>>  else {
+                  return .error
+                  }
                     let listOfCarModels = listOfArray.compactMap({ dict -> CarModel? in
                         let carModel = CarModel.parse(from: dict)
                         return carModel
