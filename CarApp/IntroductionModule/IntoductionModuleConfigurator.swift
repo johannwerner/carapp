@@ -1,7 +1,7 @@
 import RxCocoa
 import RxSwift
 
-class  IntroductionModuleConfigurator {
+final class  IntroductionModuleConfigurator {
     
     // MARK: Dependencies
     

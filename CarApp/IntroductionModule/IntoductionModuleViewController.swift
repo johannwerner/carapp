@@ -3,7 +3,7 @@ import RxCocoa
 
 /// An introduction to my coding challenge
 /// - Requires: `RxSwift`
-class  IntroductionModuleViewController: UIViewController {
+final class  IntroductionModuleViewController: UIViewController {
     
     // MARK: Dependencies
     private let viewModel:  IntroductionModuleViewModel

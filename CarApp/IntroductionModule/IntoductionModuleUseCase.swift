@@ -2,7 +2,7 @@ import RxSwift
 
 /// An introduction to the app
 /// - Requires: `RxSwift`, `Async`
-class  IntroductionModuleUseCase {
+final class  IntroductionModuleUseCase {
     
     // MARK: Dependencies
     private let interactor:  IntroductionModuleInteractor

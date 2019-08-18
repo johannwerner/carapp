@@ -26,6 +26,7 @@ extension ColorTheme {
     }
 }
 
+// MARK: - Private Methods
 private extension ColorTheme {
     
     /**

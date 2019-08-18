@@ -4,7 +4,7 @@ import RxSwift
 
 /// Entry point into app to introduce the app
 /// - Requires: `RxSwift`
-class  IntroductionModuleCoordinator {
+final class  IntroductionModuleCoordinator {
 
     // MARK: Dependencies
     private let navigationController: UINavigationController
