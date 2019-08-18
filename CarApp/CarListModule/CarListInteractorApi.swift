@@ -2,7 +2,7 @@ import RxSwift
 import RxAlamofire
 
 /// Get a list of cars from outside source
-/// - Requires: `RxSwift`, `Async`, `RxAlamofire`, `NetworkLayer`
+/// - Requires: `RxSwift`, `Async`, `RxAlamofire`
 final class CarListInteractorApi: CarListInteractor {
     
     // MARK: Dependencies

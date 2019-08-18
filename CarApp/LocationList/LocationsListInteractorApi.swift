@@ -6,7 +6,7 @@ struct LocationsListConstants {
 }
 
 /// Retrieve list of Locations from outside source
-/// - Requires: `RxSwift`, `Async`, `RxAlamofire`, `NetworkLayer`
+/// - Requires: `RxSwift`, `Async`, `RxAlamofire`
 
 final class LocationsListInteractorApi: LocationsListInteractor {
     
