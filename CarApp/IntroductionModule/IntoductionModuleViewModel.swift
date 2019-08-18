@@ -21,7 +21,7 @@ final class  IntroductionModuleViewModel {
     init(coordinator:  IntroductionModuleCoordinator,
          configurator:  IntroductionModuleConfigurator) {
         self.coordinator = coordinator
-        self.useCase =  IntroductionModuleUseCase(interactor:  IntroductionModuleInteractorApi())
+        self.useCase =  IntroductionModuleUseCase(interactor:  configurator.introductionModuleInteractor)
         
         observeViewEffect()
     }

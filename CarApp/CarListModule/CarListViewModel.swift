@@ -24,7 +24,7 @@ final class CarListViewModel {
          locationName: String
         ) {
         self.coordinator = coordinator
-        let interactor = CarListInteractorApi(client: NetworkLayer())
+        let interactor = configurator.carListInteractor
         self.useCase = CarListUseCase(
             interactor: interactor,
             locationName: locationName

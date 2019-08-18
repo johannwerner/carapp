@@ -23,7 +23,7 @@ final class LocationsListViewModel {
     init(coordinator: LocationsListCoordinator,
          configurator: LocationsListConfigurator) {
         self.coordinator = coordinator
-        self.useCase = LocationsListUseCase(interactor: LocationsListInteractorApi(client: NetworkLayer()))
+        self.useCase = LocationsListUseCase(interactor: configurator.locationsListInteractor)
         
         observeViewEffect()
         getListOfLocations()

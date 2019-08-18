@@ -25,7 +25,8 @@ final class MapViewViewModel {
          position: Position
         ) {
         self.coordinator = coordinator
-        self.useCase = MapViewUseCase(interactor: MapViewInteractorApi())
+        let interactor = configurator.mapViewInteractor
+        self.useCase = MapViewUseCase(interactor: interactor)
         self.position = position
         
         observeViewEffect()
