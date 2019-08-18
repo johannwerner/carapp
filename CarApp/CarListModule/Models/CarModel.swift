@@ -19,7 +19,6 @@ struct CarModel: Codable, Equatable {
     var model: String
     var fuel: Double
     var position: Position?
-    var nullPosition: Position?
     
     var fuelString: String {
         if fuel == 0.0 {
