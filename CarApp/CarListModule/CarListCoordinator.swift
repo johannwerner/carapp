@@ -13,7 +13,10 @@ final class CarListCoordinator {
 
     // MARK: - Life cycle
     
-    init(navigationController: UINavigationController, configurator: CarListConfigurator) {
+    init(
+    navigationController: UINavigationController, 
+    configurator: CarListConfigurator
+    ) {
         self.navigationController = navigationController
         self.configurator = configurator
     }
