@@ -24,9 +24,15 @@ final class LocationsListCoordinator {
 extension LocationsListCoordinator {
     
     func showLocationList(animated: Bool) {
-        let viewModel = LocationsListViewModel(coordinator: self, configurator: configurator)
+        let viewModel = LocationsListViewModel(
+            coordinator: self,
+            configurator: configurator
+        )
         let viewController = LocationsListViewController(viewModel: viewModel)
-        navigationController.pushViewController(viewController, animated: animated)
+        navigationController.pushViewController(
+            viewController,
+            animated: animated
+        )
     }
 }
 

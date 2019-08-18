@@ -34,7 +34,7 @@ extension MapViewCoordinator {
         let viewController = MapViewViewController(viewModel: viewModel)
         navigationController.pushViewController(
             viewController,
-         animated: animated
+            animated: animated
         )
     }
 }

@@ -12,7 +12,10 @@ final class  IntroductionModuleCoordinator {
 
     // MARK: - Life cycle
     
-    init(navigationController: UINavigationController, configurator:  IntroductionModuleConfigurator) {
+    init(
+        navigationController: UINavigationController,
+         configurator:  IntroductionModuleConfigurator
+        ) {
         self.navigationController = navigationController
         self.configurator = configurator
     }
@@ -25,7 +28,10 @@ extension  IntroductionModuleCoordinator {
     func showIntroduction(animated: Bool) {
         let viewModel =  IntroductionModuleViewModel(coordinator: self, configurator: configurator)
         let viewController =  IntroductionModuleViewController(viewModel: viewModel)
-        navigationController.pushViewController(viewController, animated: animated)
+        navigationController.pushViewController(
+            viewController,
+            animated: animated
+        )
     }
 }
 
@@ -34,8 +40,13 @@ extension  IntroductionModuleCoordinator {
 extension  IntroductionModuleCoordinator {
 
     func showLocationList(animated: Bool) {
-        let configurator = LocationsListConfigurator(locationsListInteractor: LocationsListInteractorApi())
-        let coordinator = LocationsListCoordinator(navigationController: navigationController, configurator: configurator)
+        let configurator = LocationsListConfigurator(
+            locationsListInteractor: LocationsListInteractorApi()
+        )
+        let coordinator = LocationsListCoordinator(
+            navigationController: navigationController,
+            configurator: configurator
+        )
         coordinator.showLocationList(animated: true)
     }
 }

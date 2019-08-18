@@ -18,8 +18,10 @@ final class  IntroductionModuleViewModel {
 
     // MARK: - Life cycle
     
-    init(coordinator:  IntroductionModuleCoordinator,
-         configurator:  IntroductionModuleConfigurator) {
+    init(
+        coordinator:  IntroductionModuleCoordinator,
+         configurator:  IntroductionModuleConfigurator
+        ) {
         self.coordinator = coordinator
         self.useCase =  IntroductionModuleUseCase(interactor:  configurator.introductionModuleInteractor)
         

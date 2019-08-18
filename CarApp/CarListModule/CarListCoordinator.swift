@@ -30,7 +30,10 @@ extension CarListCoordinator {
             locationName: locationName
         )
         let viewController = CarListViewController(viewModel: viewModel)
-        navigationController.pushViewController(viewController, animated: animated)
+        navigationController.pushViewController(
+            viewController,
+            animated: animated
+        )
     }
 }
 

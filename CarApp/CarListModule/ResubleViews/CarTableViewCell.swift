@@ -88,22 +88,22 @@ private extension CarTableViewCell {
     
     func createCircleViews() {
         for index in 0...3 {
-            let firstCircleView = CircleView()
-            licensePlateView.addSubview(firstCircleView)
-            firstCircleView.autoSetDimensions(to: CGSize(width: 2, height: 2))
+            let circleView = CircleView()
+            licensePlateView.addSubview(circleView)
+            circleView.autoSetDimensions(to: CGSize(width: 2, height: 2))
             
             switch index {
             case 0, 1:
-                firstCircleView.autoPinEdge(toSuperviewEdge: .top, withInset: 3)
+                circleView.autoPinEdge(toSuperviewEdge: .top, withInset: 3)
             default:
-                firstCircleView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 3)
+                circleView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 3)
             }
             
             switch index {
             case 0, 2:
-                firstCircleView.autoPinEdge(toSuperviewEdge: .leading, withInset: 3)
+                circleView.autoPinEdge(toSuperviewEdge: .leading, withInset: 3)
             default:
-                firstCircleView.autoPinEdge(toSuperviewEdge: .trailing, withInset: 3)
+                circleView.autoPinEdge(toSuperviewEdge: .trailing, withInset: 3)
             }
         }
     }
