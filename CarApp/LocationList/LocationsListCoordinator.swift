@@ -13,7 +13,10 @@ final class LocationsListCoordinator {
     
     // MARK: - Life cycle
     
-    init(navigationController: UINavigationController, configurator: LocationsListConfigurator) {
+    init(
+        navigationController: UINavigationController,
+        configurator: LocationsListConfigurator
+        ) {
         self.navigationController = navigationController
         self.configurator = configurator
     }

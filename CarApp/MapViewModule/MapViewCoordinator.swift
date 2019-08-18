@@ -12,7 +12,10 @@ final class MapViewCoordinator {
 
     // MARK: - Life cycle
     
-    init(navigationController: UINavigationController, configurator: MapViewConfigurator) {
+    init(
+        navigationController: UINavigationController,
+        configurator: MapViewConfigurator
+        ) {
         self.navigationController = navigationController
         self.configurator = configurator
     }
