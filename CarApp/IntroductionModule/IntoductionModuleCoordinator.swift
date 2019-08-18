@@ -2,7 +2,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-/// <#Brief description of the purpose of the coordinator#>
+/// Entry point into app to introduce the app
 /// - Requires: `RxSwift`
 class  IntroductionModuleCoordinator {
 
@@ -11,7 +11,6 @@ class  IntroductionModuleCoordinator {
     private let configurator:  IntroductionModuleConfigurator
     
     // MARK: Tooling
-    private let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
     
