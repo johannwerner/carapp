@@ -2,7 +2,7 @@ import RxSwift
 import RxCocoa
 
 /// An introduction to my coding challenge
-/// - Requires: `RxSwift`
+/// - Requires: `RxSwift`, `RxCocoa`
 final class  IntroductionModuleViewController: UIViewController {
     
     // MARK: Dependencies

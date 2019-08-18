@@ -1,5 +1,4 @@
 import UIKit
-import RxSwift
 
 /// Show the available vehicels for a speficic location
 /// - Requires: `RxSwift`

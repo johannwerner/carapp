@@ -1,7 +1,6 @@
-import RxSwift
 
 /// An introduction to the app
-/// - Requires: `RxSwift`, `Async`
+/// - Requires:
 final class  IntroductionModuleUseCase {
     
     // MARK: Dependencies

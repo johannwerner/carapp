@@ -1,6 +1,3 @@
-import RxCocoa
-import RxSwift
-
 final class LocationsListConfigurator {
     
     // MARK: Dependencies

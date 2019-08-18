@@ -1,5 +1,3 @@
-import RxSwift
-
 final class CarListConfigurator {
     
     // MARK: Dependencies

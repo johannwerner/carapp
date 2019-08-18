@@ -1,8 +1,7 @@
 import UIKit
-import RxSwift
 
 /// Show the available locations 
-/// - Requires: `RxSwift`
+/// - Requires: `UIKit`
 final class LocationsListCoordinator {
     
     // MARK: Dependencies

@@ -1,9 +1,7 @@
 import UIKit
-import RxCocoa
-import RxSwift
 
 /// Entry point into app to introduce the app
-/// - Requires: `RxSwift`
+/// - Requires: `UIKit`
 final class  IntroductionModuleCoordinator {
 
     // MARK: Dependencies

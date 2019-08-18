@@ -1,9 +1,7 @@
 import UIKit
-import RxCocoa
-import RxSwift
 
 /// Show a map view with pinned locations
-/// - Requires: `RxSwift`, `RxCocoa`
+/// - Requires: `UIKit`
 final class MapViewCoordinator {
 
     // MARK: Dependencies
