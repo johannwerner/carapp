@@ -34,7 +34,7 @@ extension  IntroductionModuleCoordinator {
 extension  IntroductionModuleCoordinator {
 
     func showLocationList(animated: Bool) {
-        let configurator = LocationsListConfigurator(locationsListInteractor: LocationsListInteractorApi(client: NetworkLayer()))
+        let configurator = LocationsListConfigurator(locationsListInteractor: LocationsListInteractorApi())
         let coordinator = LocationsListCoordinator(navigationController: navigationController, configurator: configurator)
         coordinator.showLocationList(animated: true)
     }

@@ -50,7 +50,6 @@
 		9334C0F82306FA0B00F21977 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0CE2306FA0B00F21977 /* ColorTheme.swift */; };
 		9334C0F92306FA0B00F21977 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D02306FA0B00F21977 /* Async.swift */; };
 		9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D12306FA0B00F21977 /* ObservableType.swift */; };
-		9334C0FB2306FA0B00F21977 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0D32306FA0B00F21977 /* NetworkLayer.swift */; };
 		9334C0FD2306FAE700F21977 /* CarListTestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C0FC2306FAE700F21977 /* CarListTestInteractor.swift */; };
 		9334C10923080BF300F21977 /* IntoductionModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10123080BF300F21977 /* IntoductionModuleCoordinator.swift */; };
 		9334C10A23080BF300F21977 /* IntoductionModuleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10223080BF300F21977 /* IntoductionModuleUseCase.swift */; };
@@ -123,7 +122,6 @@
 		9334C0CE2306FA0B00F21977 /* ColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		9334C0D02306FA0B00F21977 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		9334C0D12306FA0B00F21977 /* ObservableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
-		9334C0D32306FA0B00F21977 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		9334C0FC2306FAE700F21977 /* CarListTestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTestInteractor.swift; sourceTree = "<group>"; };
 		9334C10123080BF300F21977 /* IntoductionModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleCoordinator.swift; sourceTree = "<group>"; };
 		9334C10223080BF300F21977 /* IntoductionModuleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoductionModuleUseCase.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				9334C0AC2306FA0B00F21977 /* LocationList */,
 				9334C09F2306FA0B00F21977 /* CarListModule */,
 				9334C0B92306FA0B00F21977 /* MapViewModule */,
-				9334C0D22306FA0B00F21977 /* NetworkLayer */,
 				9334C0C22306FA0B00F21977 /* SuportingFiles */,
 				9334C07F2306F83D00F21977 /* AppDelegate.swift */,
 			);
@@ -353,14 +350,6 @@
 			children = (
 			);
 			path = MvRx;
-			sourceTree = "<group>";
-		};
-		9334C0D22306FA0B00F21977 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				9334C0D32306FA0B00F21977 /* NetworkLayer.swift */,
-			);
-			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		9334C10023080B9200F21977 /* IntroductionModule */ = {
@@ -563,7 +552,6 @@
 				9334C0F02306FA0B00F21977 /* NSObject+CarApp.swift in Sources */,
 				9334C0D62306FA0B00F21977 /* CarListViewController.swift in Sources */,
 				9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */,
-				9334C0FB2306FA0B00F21977 /* NetworkLayer.swift in Sources */,
 				9334C0F52306FA0B00F21977 /* Array+CarApp.swift in Sources */,
 				9334C0D92306FA0B00F21977 /* CarListInteractorApi.swift in Sources */,
 				9334C0D42306FA0B00F21977 /* CarListInteractor.swift in Sources */,

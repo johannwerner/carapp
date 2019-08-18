@@ -6,13 +6,8 @@ import RxAlamofire
 final class CarListInteractorApi: CarListInteractor {
     
     // MARK: Dependencies
-    private let client: NetworkLayer
     
     // MARK: - Life cycle
-    
-    init(client: NetworkLayer) {
-        self.client = client
-    }
 }
 
 extension CarListInteractorApi {

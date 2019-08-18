@@ -11,13 +11,8 @@ struct LocationsListConstants {
 final class LocationsListInteractorApi: LocationsListInteractor {
     
     // MARK: Dependencies
-    private let client: NetworkLayer
     
     // MARK: - Life cycle
-    
-    init(client: NetworkLayer) {
-        self.client = client
-    }
 }
 
 extension LocationsListInteractorApi {
