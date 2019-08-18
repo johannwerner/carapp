@@ -57,7 +57,7 @@ private extension CarTableViewCell {
         contentView.addSubview(vehicleTitleLabel)
         vehicleTitleLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
         vehicleTitleLabel.autoAlignAxis(toSuperviewAxis: .vertical)
-        vehicleTitleLabel.text = "car_list_item_title".localizedString(CLMComments.vehicleCellTitle)
+        vehicleTitleLabel.text = "car_list_item_title".localizedString(CLMLComments.vehicleCellTitle)
         vehicleTitleLabel.font = UIFont.systemFont(ofSize: 24)
         
         contentView.addSubview(licensePlateView)

@@ -21,6 +21,6 @@ struct CarListConstants {
     static let carListUrl = "https://car2go.now.sh/vehicles/%@"
 }
 
-struct CLMComments {
+struct CLMLComments {
     static let vehicleCellTitle = "Title of vehicle information in a list of vehicles."
 }
