@@ -16,6 +16,7 @@ class CarAppTests: XCTestCase {
     
     // MARK: - Life Cycle
     override func setUp() {
+        super.setUp()
         let interactor = CarListTestInteractor()
         let useCase = CarListUseCase(
             interactor: interactor,
@@ -25,6 +26,7 @@ class CarAppTests: XCTestCase {
     }
     
     override func tearDown() {
+        super.tearDown()
         useCase = nil
     }
 }
