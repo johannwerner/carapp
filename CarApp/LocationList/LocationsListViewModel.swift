@@ -76,7 +76,7 @@ private extension LocationsListViewModel {
                     break
                 case .success(let listOfLocations):
                     self.listOfLocations = listOfLocations
-                    self.viewEffect.accept(.success) // VC would use this event to refresh the table view for exampple
+                    self.viewEffect.accept(.success)
                 }
             })
             .disposed(by: disposeBag)
