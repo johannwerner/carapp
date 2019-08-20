@@ -33,7 +33,7 @@ extension LocationTableViewCell {
 }
 
 // MARK: - Private
-extension LocationTableViewCell {
+private extension LocationTableViewCell {
     func setUpViews() {
         accessoryType = .disclosureIndicator
         contentView.addSubview(locationNameLabel)
