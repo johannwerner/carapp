@@ -9,7 +9,7 @@ final class  IntroductionModuleViewController: UIViewController {
     private let viewModel:  IntroductionModuleViewModel
     
     // MARK: Rx
-    private let viewAction = PublishRelay< IntroductionModuleViewAction>()
+    private let viewAction = PublishRelay<IntroductionModuleViewAction>()
     
     // MARK: View components
     private let primaryButton = UIButton()
