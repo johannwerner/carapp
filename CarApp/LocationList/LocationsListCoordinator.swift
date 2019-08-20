@@ -49,6 +49,9 @@ extension LocationsListCoordinator {
             navigationController: navigationController,
             configurator: configurator
         )
-        coordinator.showCarList( locationName: locationModel.name, animated: animated)
+        coordinator.showCarList(
+            locationName: locationModel.name,
+            animated: animated
+        )
     }
 }

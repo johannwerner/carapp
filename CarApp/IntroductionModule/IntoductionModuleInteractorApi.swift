@@ -1,4 +1,4 @@
 ///
 /// - Requires:
-final class  IntroductionModuleInteractorApi:  IntroductionModuleInteractor {}
+final class IntroductionModuleInteractorApi:  IntroductionModuleInteractor {}
 

@@ -18,7 +18,6 @@ final class LocationsListUseCase {
 
 extension LocationsListUseCase {
 
-    
     func getListOfLocations() -> Observable<LocationsListStatus> {
         return self.interactor.getListOfLocations()
             .map { (result: Async<Any>) -> LocationsListStatus in

@@ -49,7 +49,6 @@ extension  IntroductionModuleViewModel {
 // MARK: - Private functions
 
 private extension  IntroductionModuleViewModel {
-    
     func showLocationView() {
         coordinator.showLocationList(animated: true)
     }

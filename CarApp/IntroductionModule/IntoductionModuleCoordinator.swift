@@ -2,7 +2,7 @@ import UIKit
 
 /// Entry point into app to introduce the app
 /// - Requires: `UIKit`
-final class  IntroductionModuleCoordinator {
+final class IntroductionModuleCoordinator {
 
     // MARK: Dependencies
     private let navigationController: UINavigationController
@@ -14,7 +14,7 @@ final class  IntroductionModuleCoordinator {
     
     init(
         navigationController: UINavigationController,
-         configurator:  IntroductionModuleConfigurator
+        configurator:  IntroductionModuleConfigurator
         ) {
         self.navigationController = navigationController
         self.configurator = configurator
