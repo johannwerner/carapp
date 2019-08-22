@@ -84,8 +84,8 @@ private extension CarListViewModel {
                     break
                 case .error:
                     break
-                case .success(let carListStatus):
-                  self.listOfCars = carListStatus
+                case .success(let listOfCars):
+                  self.listOfCars = listOfCars
                     self.viewEffect.accept(.success)
                 }
             })
