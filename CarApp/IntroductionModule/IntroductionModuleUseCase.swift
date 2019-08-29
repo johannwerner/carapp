@@ -1,7 +1,7 @@
 
 /// An introduction to the app
 /// - Requires:
-final class  IntroductionModuleUseCase {
+final class IntroductionModuleUseCase {
     
     // MARK: Dependencies
     private let interactor:  IntroductionModuleInteractor
@@ -15,4 +15,4 @@ final class  IntroductionModuleUseCase {
 
 // MARK: - Public functions
 
-extension  IntroductionModuleUseCase {}
+extension IntroductionModuleUseCase {}

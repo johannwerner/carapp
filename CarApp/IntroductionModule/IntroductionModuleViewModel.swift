@@ -10,8 +10,8 @@ final class  IntroductionModuleViewModel {
     let viewEffect = PublishRelay< IntroductionModuleViewEffect>()
     
     // MARK: Dependencies
-    private let coordinator:  IntroductionModuleCoordinator
-    private let useCase:  IntroductionModuleUseCase
+    private let coordinator: IntroductionModuleCoordinator
+    private let useCase: IntroductionModuleUseCase
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
@@ -19,11 +19,11 @@ final class  IntroductionModuleViewModel {
     // MARK: - Life cycle
     
     init(
-        coordinator:  IntroductionModuleCoordinator,
-         configurator:  IntroductionModuleConfigurator
+        coordinator: IntroductionModuleCoordinator,
+        configurator: IntroductionModuleConfigurator
         ) {
         self.coordinator = coordinator
-        self.useCase =  IntroductionModuleUseCase(interactor:  configurator.introductionModuleInteractor)
+        self.useCase =  IntroductionModuleUseCase(interactor: configurator.introductionModuleInteractor)
         
         observeViewEffect()
     }
@@ -39,7 +39,7 @@ extension  IntroductionModuleViewModel {
             .subscribe(onNext: { [unowned self] viewAction in
                 switch viewAction {
                 case .primaryButtonPressed:
-                    self.showLocationView()
+                    self.showNextView()
                 }
             })
             .disposed(by: disposeBag)
@@ -49,7 +49,7 @@ extension  IntroductionModuleViewModel {
 // MARK: - Private functions
 
 private extension  IntroductionModuleViewModel {
-    func showLocationView() {
+    func showNextView() {
         coordinator.showLocationList(animated: true)
     }
 }

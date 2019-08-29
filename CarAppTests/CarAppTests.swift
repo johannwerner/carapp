@@ -42,9 +42,9 @@ extension CarAppTests {
                 case .error:
                     break
                 case .success(let carListStatus):
-        //When
+                    //When
                     let carModel = carListStatus.first!
-        //Then
+                    //Then
                     XCTAssertEqual(carModel.numberPlate, "HDE537EC")
                 }
                 

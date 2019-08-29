@@ -39,6 +39,7 @@ final class LocationsListViewController: UIViewController {
         setUpBinding()
         
         observeViewEffect()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
