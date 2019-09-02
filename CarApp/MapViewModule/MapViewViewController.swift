@@ -53,15 +53,11 @@ private extension MapViewViewController {
         view.backgroundColor = .white
         view.addSubview(mapView)
         mapView.autoPinEdgesToSuperviewEdges()
-        addPinToMap(postion: viewModel.position)
-        zoomMapToPosition(postion: viewModel.position)
+        addPinToMap(position: viewModel.position)
+        zoomMapToPosition(position: viewModel.position)
     }
     
-    func addPinToMap(postion: Position?) {
-        guard let position = postion else {
-            assertionFailure("firstPosition is nil")
-            return
-        }
+    func addPinToMap(position: Position) {
         let annotation = MKPointAnnotation()
         let latitidue = position.latitude
         let longitude = position.longitude
@@ -72,12 +68,8 @@ private extension MapViewViewController {
         mapView.addAnnotation(annotation)
     }
     
-    func zoomMapToPosition(postion: Position?, delta: CLLocationDegrees = 0.05) {
-        guard let position = postion else {
-            assertionFailure("firstPosition is nil")
-            return
-        }
-        
+    func zoomMapToPosition(position: Position, delta: CLLocationDegrees = 0.05) {
+
         let latitude:CLLocationDegrees = position.latitude
         
         let longitude:CLLocationDegrees = position.longitude
