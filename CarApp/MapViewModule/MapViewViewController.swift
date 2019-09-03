@@ -51,6 +51,10 @@ private extension MapViewViewController {
     /// Initializes and configures components in controller.
     func setUpViews() {
         view.backgroundColor = .white
+        setUpMap()
+    }
+    
+    func setUpMap() {
         view.addSubview(mapView)
         mapView.autoPinEdgesToSuperviewEdges()
         addPinToMap(position: viewModel.position)

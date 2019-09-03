@@ -14,21 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let navigationController = UINavigationController()
-        navigationController.isNavigationBarHidden = true
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.makeKeyAndVisible()
-        self.window = window
-        self.window?.rootViewController = navigationController
+
         
-        let interactor = IntroductionModuleInteractorApi()
-        let configurator = IntroductionModuleConfigurator(introductionModuleInteractor: interactor)
-        let coordinator = IntroductionModuleCoordinator(
-            navigationController: navigationController,
-            configurator: configurator
-        )
-        coordinator.showIntroduction(animated: true)
+        startApp()
         return true
     }
 
@@ -54,5 +42,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
+
+private extension AppDelegate {
+    func startApp() {
+        let startNavigationController = createNavigationController()
+        makeNavigationControllerMain(navigationController: startNavigationController)
+        showIntroduction(navigationController: startNavigationController)
+    }
+    
+    func createNavigationController() -> UINavigationController {
+        let navigationController = UINavigationController()
+        navigationController.isNavigationBarHidden = true
+        return navigationController
+    }
+    
+    func makeNavigationControllerMain(navigationController: UINavigationController) {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        self.window = window
+        self.window?.rootViewController = navigationController
+    }
+    
+    func showIntroduction(navigationController: UINavigationController) {
+        let interactor = IntroductionModuleInteractorApi()
+        let configurator = IntroductionModuleConfigurator(introductionModuleInteractor: interactor)
+        let coordinator = IntroductionModuleCoordinator(
+            navigationController: navigationController,
+            configurator: configurator
+        )
+        coordinator.showIntroduction(animated: true)
+    }
 }
 

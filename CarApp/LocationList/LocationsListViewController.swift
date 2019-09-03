@@ -54,6 +54,10 @@ private extension LocationsListViewController {
     
     /// Initializes and configures components in controller.
     func setUpViews() {
+        setUpTableView()
+    }
+    
+    func setUpTableView() {
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
         tableView.backgroundColor = ColorTheme.licensePlateBackground

@@ -11,12 +11,13 @@ import UIKit
 final class CircleView: UIView {
     
     override init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         backgroundColor = ColorTheme.circleDotBackground
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        backgroundColor = ColorTheme.circleDotBackground
     }
 
     override func setNeedsLayout() {

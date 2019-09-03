@@ -59,9 +59,13 @@ private extension CarListViewController {
         title = viewModel.locationName
         navigationController?.isNavigationBarHidden = false
         
+        setUpTableView()
+    }
+    
+    func setUpTableView() {
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
-
+        
         tableView.register(CarTableViewCell.self, forCellReuseIdentifier: CarTableViewCell.className)
         tableView.dataSource = self
         tableView.delegate = self
