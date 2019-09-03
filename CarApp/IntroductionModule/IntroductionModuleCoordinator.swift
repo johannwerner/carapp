@@ -42,7 +42,18 @@ extension  IntroductionModuleCoordinator {
 
 extension  IntroductionModuleCoordinator {
 
-    func showLocationList(animated: Bool) {
+//    func showLocationList(animated: Bool) {
+//        let configurator = LocationsListConfigurator(
+//            locationsListInteractor: LocationsListInteractorApi()
+//        )
+//        let coordinator = LocationsListCoordinator(
+//            navigationController: navigationController,
+//            configurator: configurator
+//        )
+//        coordinator.showLocationList(animated: true)
+//    }
+    
+    func showLocationList(models: [LocationModel], animated: Bool) {
         let configurator = LocationsListConfigurator(
             locationsListInteractor: LocationsListInteractorApi()
         )
@@ -50,6 +61,6 @@ extension  IntroductionModuleCoordinator {
             navigationController: navigationController,
             configurator: configurator
         )
-        coordinator.showLocationList(animated: true)
+        coordinator.showLocationList(models: models, animated: true)
     }
 }

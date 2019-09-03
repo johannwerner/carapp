@@ -13,7 +13,7 @@ final class LocationsListViewModel {
     // MARK: Dependencies
     private let coordinator: LocationsListCoordinator
     private let useCase: LocationsListUseCase
-    private var listOfLocations: [LocationModel] = []
+    private var listOfLocations: [LocationModel]
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
@@ -21,10 +21,11 @@ final class LocationsListViewModel {
     // MARK: - Life cycle
     
     init(coordinator: LocationsListCoordinator,
-         configurator: LocationsListConfigurator) {
+         configurator: LocationsListConfigurator,
+         models: [LocationModel]) {
         self.coordinator = coordinator
         self.useCase = LocationsListUseCase(interactor: configurator.locationsListInteractor)
-        
+        self.listOfLocations = models
         observeViewEffect()
         getListOfLocations()
     }

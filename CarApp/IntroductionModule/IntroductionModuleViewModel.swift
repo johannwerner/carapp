@@ -50,7 +50,22 @@ extension  IntroductionModuleViewModel {
 
 private extension  IntroductionModuleViewModel {
     func showNextView() {
-        coordinator.showLocationList(animated: true)
+        getListOfLocations()
+    }
+    
+    func getListOfLocations() {
+        self.useCase.getListOfLocations()
+            .subscribe(onNext: { [unowned self] status in
+                switch status {
+                case .loading:
+                    break
+                case .error:
+                    break
+                case .success(let listOfLocations):
+                    self.coordinator.showLocationList(models: listOfLocations, animated: true)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
