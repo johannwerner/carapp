@@ -46,7 +46,7 @@ final class CarListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
+        viewNavigationController.isNavigationBarHidden = false
     }
 }
 
@@ -57,7 +57,7 @@ private extension CarListViewController {
     /// Initializes and configures components in controller.
     func setUpViews() {
         title = viewModel.locationName
-        navigationController?.isNavigationBarHidden = false
+        viewNavigationController.isNavigationBarHidden = false
         
         setUpTableView()
     }

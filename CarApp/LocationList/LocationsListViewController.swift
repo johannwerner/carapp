@@ -44,7 +44,7 @@ final class LocationsListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        viewNavigationController.isNavigationBarHidden = true
     }
 }
 
@@ -118,3 +118,4 @@ extension LocationsListViewController: UITableViewDataSource, UITableViewDelegat
         viewAction.accept(.selectedIndex(atIndex: indexPath.row))
     }
 }
+
