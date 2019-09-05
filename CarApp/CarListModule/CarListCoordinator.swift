@@ -26,7 +26,10 @@ final class CarListCoordinator {
 
 extension CarListCoordinator {
     
-    func showCarList(locationName: String, animated: Bool) {
+    func showCarList(
+        locationName: String,
+        animated: Bool
+        ) {
         let viewModel = CarListViewModel(
             coordinator: self,
             configurator: configurator,

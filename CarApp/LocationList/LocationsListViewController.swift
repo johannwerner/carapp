@@ -44,7 +44,7 @@ final class LocationsListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewNavigationController.isNavigationBarHidden = true
+        viewNavigationController.isNavigationBarHidden = false
     }
 }
 
@@ -95,6 +95,7 @@ private extension LocationsListViewController {
 
 // MARK: - TableView
 extension LocationsListViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows
     }
@@ -105,10 +106,7 @@ extension LocationsListViewController: UITableViewDataSource, UITableViewDelegat
             assertionFailure("cell is nil")
             return cell
         }
-        guard let locationModel = viewModel.modelForIndex(index: indexPath.row) else {
-            assertionFailure("model is nil")
-            return cell
-        }
+        let locationModel = viewModel.modelForIndex(index: indexPath.row)
         locationCell.fill(with: locationModel)
         return locationCell
     }

@@ -13,3 +13,9 @@ extension Array {
         return indices.contains(index) ? self[index] : nil
     }
 }
+
+extension NonEmptyArray {
+    public subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}

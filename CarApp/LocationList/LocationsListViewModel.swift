@@ -13,7 +13,8 @@ final class LocationsListViewModel {
     // MARK: Dependencies
     private let coordinator: LocationsListCoordinator
     private let useCase: LocationsListUseCase
-    private var listOfLocations: [LocationModel]
+    private var listOfLocations: NonEmptyArray<LocationModel>
+    private var string = NonEmptyString("test")
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
@@ -22,7 +23,7 @@ final class LocationsListViewModel {
     
     init(coordinator: LocationsListCoordinator,
          configurator: LocationsListConfigurator,
-         models: [LocationModel]) {
+         models: NonEmptyArray<LocationModel>) {
         self.coordinator = coordinator
         self.useCase = LocationsListUseCase(interactor: configurator.locationsListInteractor)
         self.listOfLocations = models
@@ -39,8 +40,15 @@ extension LocationsListViewModel {
         return listOfLocations.count
     }
     
-    func modelForIndex(index: Int) -> LocationModel? {
-        return listOfLocations[safe: index]
+    func modelForIndex(index: Int) -> LocationModel {
+        if index == 0 {
+           return listOfLocations.first
+        }
+        guard let location = listOfLocations[safe: .tail(index - 1)] else {
+            assertionFailure("index out of bounds")
+            return listOfLocations.first
+        }
+        return location
     }
     
     func bind(to viewAction: PublishRelay<LocationsListViewAction>) {
@@ -49,9 +57,7 @@ extension LocationsListViewModel {
             .subscribe(onNext: { [unowned self] viewAction in
                 switch viewAction {
                 case .selectedIndex(atIndex: let index):
-                    guard let locationModel = self.modelForIndex(index: index) else {
-                        return
-                    }
+                    let locationModel = self.modelForIndex(index: index)
                     self.showCarList(locationModel: locationModel)
                 }
             })
@@ -76,7 +82,8 @@ private extension LocationsListViewModel {
                 case .error:
                     break
                 case .success(let listOfLocations):
-                    self.listOfLocations = listOfLocations
+//                    self.listOfLocations = listOfLocations
+                    print(listOfLocations)
                     self.viewEffect.accept(.success)
                 }
             })

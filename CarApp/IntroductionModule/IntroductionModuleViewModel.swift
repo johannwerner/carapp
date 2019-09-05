@@ -58,10 +58,11 @@ private extension  IntroductionModuleViewModel {
             .subscribe(onNext: { [unowned self] status in
                 switch status {
                 case .loading:
-                    break
+                    self.viewEffect.accept(.loading)
                 case .error:
                     break
                 case .success(let listOfLocations):
+                    self.viewEffect.accept(.success)
                     self.coordinator.showLocationList(models: listOfLocations, animated: true)
                 }
             })
@@ -80,6 +81,7 @@ private extension  IntroductionModuleViewModel {
             .subscribe(onNext: { effect in
                 switch effect {
                 case .success: break
+                case .loading: break
                 }
             })
             .disposed(by: disposeBag)

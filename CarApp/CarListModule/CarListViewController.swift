@@ -57,8 +57,6 @@ private extension CarListViewController {
     /// Initializes and configures components in controller.
     func setUpViews() {
         title = viewModel.locationName
-        viewNavigationController.isNavigationBarHidden = false
-        
         setUpTableView()
     }
     

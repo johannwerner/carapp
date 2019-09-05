@@ -3,7 +3,7 @@
 enum LocationsListStatus {
     case loading
     case error
-    case success([LocationModel])
+    case success(NonEmptyArray<LocationModel>)
 }
 
 /// View effect enum for LocationsList.

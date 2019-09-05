@@ -53,7 +53,7 @@ extension  IntroductionModuleCoordinator {
 //        coordinator.showLocationList(animated: true)
 //    }
     
-    func showLocationList(models: [LocationModel], animated: Bool) {
+    func showLocationList(models: NonEmptyArray<LocationModel>, animated: Bool) {
         let configurator = LocationsListConfigurator(
             locationsListInteractor: LocationsListInteractorApi()
         )

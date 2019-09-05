@@ -38,7 +38,7 @@ extension LocationsListCoordinator {
 //        )
 //    }
     
-    func showLocationList(models: [LocationModel], animated: Bool) {
+    func showLocationList(models: NonEmptyArray<LocationModel>, animated: Bool) {
         let viewModel = LocationsListViewModel(
             coordinator: self,
             configurator: configurator, models: models

@@ -26,11 +26,16 @@ extension IntroductionModuleUseCase {
                     guard let listOfArray = data as? Array<Dictionary<String, Any>> else {
                         return .error
                     }
-                    let listOfObjects = listOfArray.compactMap({ dict -> LocationModel? in
+                    var listOfObjects = listOfArray.compactMap({ dict -> LocationModel? in
                         let model = LocationModel.parse(from: dict)
                         return model
                     })
-                    return .success(listOfObjects)
+                    guard let firstObject = listOfObjects.first else {
+                        return .error
+                    }
+                    listOfObjects.remove(at: 0)
+                    let nonEmptyArray = NonEmptyArray(firstObject, listOfObjects)
+                    return .success(nonEmptyArray)
                 case .error:
                     return .error
                 }

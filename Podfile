@@ -9,12 +9,11 @@ workspace 'CarApp'
 project 'CarApp.xcodeproj'
 
 def shared_pods
-    pod 'PureLayout'
-    pod 'R.swift', '5.0.3'
-    pod 'RxCocoa'
+    pod 'PureLayout', '3.1.4'
+    pod 'RxCocoa', '5.0.0'
     # Network layer abstraction
-    pod 'Alamofire', '4.8.1'
     pod 'RxAlamofire', '5.0.0'
+    pod 'Alamofire', '4.9.0'
 end
 
 
