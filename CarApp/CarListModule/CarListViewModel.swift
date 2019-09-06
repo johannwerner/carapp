@@ -58,12 +58,8 @@ extension CarListViewModel {
                         assertionFailure("model is nil")
                         return
                     }
-                    guard let position = model.position else {
-                        debugPrint("position is nil")
-                        return
-                    }
                     self.coordinator.showMapView(
-                        position: position,
+                        position: model.position,
                         animated: true
                     )
                 }

@@ -26,6 +26,7 @@ final class CarTableViewCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setUpViews()
     }
 }
 
@@ -44,11 +45,7 @@ extension CarTableViewCell {
 // MARK: - Private
 private extension CarTableViewCell {
     var hasPosition: Bool {
-        guard let model = model else {
-            assertionFailure("do not use model before fill with model is called")
-            return false
-        }
-        return model.position != nil
+        return true
     }
     
     func setUpViews() {

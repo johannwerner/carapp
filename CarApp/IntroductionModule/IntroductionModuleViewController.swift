@@ -107,7 +107,7 @@ private extension  IntroductionModuleViewController {
     func setUpActivityIndicator() {
         primaryButton.addSubview(activityIndicator)
         activityIndicator.autoCenterInSuperview()
-        activityIndicator.style = .whiteLarge
+        activityIndicator.style = .white
         activityIndicator.hidesWhenStopped = true
         activityIndicator.stopAnimating()
     }

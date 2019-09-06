@@ -43,9 +43,9 @@ post_install do |installer|
                 'R.swift.Library'
                 ].include?(target.name)
                 
-                puts "Setting Swift version for #{target.name} to 4.0"
+                puts "Setting Swift version for #{target.name} to 5.0"
                 
-                config.build_settings['SWIFT_VERSION'] = '4.0'
+                config.build_settings['SWIFT_VERSION'] = '5.0'
             end
 
         end

@@ -68,7 +68,7 @@ extension LocationsListViewModel {
 // MARK: - Private functions
 
 private extension LocationsListViewModel {
-    
+
     func showCarList(locationModel: LocationModel) {
         coordinator.showCarList(locationModel: locationModel, animated: true)
     }
