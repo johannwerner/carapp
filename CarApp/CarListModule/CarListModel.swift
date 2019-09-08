@@ -24,3 +24,8 @@ struct CarListConstants {
 struct CLMLComments {
     static let vehicleCellTitle = "Title of vehicle information in a list of vehicles."
 }
+
+struct CarListModel {
+    var locationName: String
+    var carModels: [CarModel]
+}
