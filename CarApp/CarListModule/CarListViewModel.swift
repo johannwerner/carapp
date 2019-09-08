@@ -6,7 +6,8 @@ import RxSwift
 final class CarListViewModel {
     // MARK: - Properties
     private var listOfCars: [CarModel] = []
-    var locationName: String
+    var model: CarListModel
+    
     // MARK: MvRx
     let viewEffect = PublishRelay<CarListViewEffect>()
     
@@ -21,16 +22,15 @@ final class CarListViewModel {
     
     init(coordinator: CarListCoordinator,
          configurator: CarListConfigurator,
-         locationName: String
+         model: CarListModel
         ) {
         self.coordinator = coordinator
         let interactor = configurator.carListInteractor
         self.useCase = CarListUseCase(
             interactor: interactor,
-            locationName: locationName
+            locationName: model.locationName
         )
-
-        self.locationName = locationName
+        self.model = model
         observeViewEffect()
         getListOfCarsForHamburg()
     }
@@ -42,6 +42,10 @@ extension CarListViewModel {
     
     var numberOfRows: Int {
         return listOfCars.count
+    }
+    
+    var locationName: String {
+        return model.locationName
     }
     
     func modelForIndexPath(index: Int) -> CarModel? {
@@ -58,12 +62,8 @@ extension CarListViewModel {
                         assertionFailure("model is nil")
                         return
                     }
-                    guard let position = model.position else {
-                        debugPrint("position is nil")
-                        return
-                    }
                     self.coordinator.showMapView(
-                        position: position,
+                        position: model.position,
                         animated: true
                     )
                 }

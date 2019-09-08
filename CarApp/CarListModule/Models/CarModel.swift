@@ -18,9 +18,19 @@ struct CarModel: Codable, Equatable {
     var vin: String
     var model: String
     var fuel: Double
-    var position: Position?
-    
+    var position: Position
+}
+
+// MARK: - Public
+extension CarModel {
     var fuelString: String {
+        return fuelStringImplementation
+    }
+}
+
+// MARK: - Private
+private extension CarModel {
+    var fuelStringImplementation: String {
         if fuel == 0.0 {
             return "car_list_item_tank_empty".localizedString()
         }
@@ -29,3 +39,4 @@ struct CarModel: Codable, Equatable {
         return finalString
     }
 }
+

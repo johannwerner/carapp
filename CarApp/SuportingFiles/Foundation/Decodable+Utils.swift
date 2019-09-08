@@ -5,6 +5,7 @@ import Foundation
 public extension Decodable {
     
     static func parse(from item: Any?, strategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> Self? {
+        
         guard let data = self.data(from: item) else {
             return nil
         }

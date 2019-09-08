@@ -6,6 +6,7 @@ enum  IntroductionModuleStatus {
 /// View effect enum for  IntroductionModule.
 enum  IntroductionModuleViewEffect {
     case success
+    case loading
 }
 
 /// View action enum for  IntroductionModule.
