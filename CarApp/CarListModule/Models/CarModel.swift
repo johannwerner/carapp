@@ -11,7 +11,7 @@ import Foundation
 struct CarModel: Codable, Equatable {
     //TODO: Not really neccesary can be removed
     static func == (lhs: CarModel, rhs: CarModel) -> Bool {
-        return lhs.vin == rhs.vin
+        lhs.vin == rhs.vin
     }
     
     var numberPlate: String
@@ -24,7 +24,7 @@ struct CarModel: Codable, Equatable {
 // MARK: - Public
 extension CarModel {
     var fuelString: String {
-        return fuelStringImplementation
+        fuelStringImplementation
     }
 }
 
@@ -39,4 +39,3 @@ private extension CarModel {
         return finalString
     }
 }
-

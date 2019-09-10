@@ -17,6 +17,9 @@ final class IntroductionModuleViewController: UIViewController {
     private let subtitleLabel = UILabel()
     private let activityIndicator = UIActivityIndicatorView()
     
+    
+    @Published var password: String = ""
+    
     // MARK: Tooling
     private let disposeBag = DisposeBag()
 
@@ -25,6 +28,13 @@ final class IntroductionModuleViewController: UIViewController {
     init(viewModel:  IntroductionModuleViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
+        password = "1234"
+        
+        _ = $password.sink { pass in
+            print(pass)
+        }
+        self.password = "password"
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -82,10 +92,15 @@ private extension  IntroductionModuleViewController {
             "introduction_primary_button".localizedString(),
             for: .normal
         )
+        
         primaryButton.rx.tap.subscribe(onNext: { [unowned self] _ in
             self.viewAction.accept(.primaryButtonPressed)
         })
         .disposed(by: disposeBag)
+        _ = primaryButton.publisher(for: .touchUpInside).sink { button in
+            self.viewAction.accept(.primaryButtonPressed)
+        }
+        primaryButton.sendActions(for: .touchUpInside)
     }
     
     func setUpTitleLable() {
@@ -107,7 +122,8 @@ private extension  IntroductionModuleViewController {
     func setUpActivityIndicator() {
         primaryButton.addSubview(activityIndicator)
         activityIndicator.autoCenterInSuperview()
-        activityIndicator.style = .white
+        activityIndicator.style = .medium
+        activityIndicator.color = .white
         activityIndicator.hidesWhenStopped = true
         activityIndicator.stopAnimating()
     }

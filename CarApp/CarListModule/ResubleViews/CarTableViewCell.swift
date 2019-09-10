@@ -11,7 +11,6 @@ import UIKit
 final class CarTableViewCell: UITableViewCell {
     
     // MARK: - Properties
-    private var model: CarModel?
     private var vehicleTitleLabel = UILabel()
     private var licensePlateView = LicensePlateView()
     private var fuelLabel = UILabel()
@@ -33,19 +32,18 @@ final class CarTableViewCell: UITableViewCell {
 // MARK: - Public
 extension CarTableViewCell {
     func fill(with model: CarModel) {
-        self.model = model
         licensePlateView.setTitle(model.numberPlate)
         fuelLabel.text = model.fuelString
         modelLabel.text = model.model
-        accessoryType = hasPosition ? .disclosureIndicator: .none
-        selectionStyle = hasPosition ? .gray: .none
+        accessoryType = .disclosureIndicator
+        selectionStyle = .gray
     }
 }
 
 // MARK: - Private
 private extension CarTableViewCell {
     var hasPosition: Bool {
-        return true
+        true
     }
     
     func setUpViews() {

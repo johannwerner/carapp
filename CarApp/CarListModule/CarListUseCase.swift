@@ -13,7 +13,7 @@ final class CarListUseCase {
     
     init(
         interactor: CarListInteractor,
-        locationName: String
+        locationName: String = ""
         ) {
         self.interactor = interactor
         self.locationName = locationName
@@ -25,7 +25,7 @@ final class CarListUseCase {
 extension CarListUseCase {
     
     func getCarListForLocation() -> Observable<CarListStatus> {
-        return self.interactor.getListOfCarsForLocation(location: locationName)
+        interactor.getListOfCarsForLocation()
             .map { (result: Async<Any>) -> CarListStatus in
                 switch result {
                 case .loading:

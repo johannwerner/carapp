@@ -46,15 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func startApp() {
-        let startNavigationController = createNavigationController()
+        let startNavigationController = createNavigationController
+        startNavigationController.isNavigationBarHidden = true
         makeNavigationControllerMain(navigationController: startNavigationController)
         showIntroduction(navigationController: startNavigationController)
     }
     
-    func createNavigationController() -> UINavigationController {
-        let navigationController = UINavigationController()
-        navigationController.isNavigationBarHidden = true
-        return navigationController
+    var createNavigationController: UINavigationController {
+        UINavigationController()
     }
     
     func makeNavigationControllerMain(navigationController: UINavigationController) {

@@ -11,10 +11,10 @@ import Foundation
 extension NSObject {
 
     @nonobjc var className: String {
-        return String(describing: type(of: self))
+        String(describing: type(of: self))
     }
     
     @nonobjc class var className: String {
-        return String(describing: self)
+        String(describing: self)
     }
 }

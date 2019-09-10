@@ -19,17 +19,20 @@ extension UIViewController {
     ///in production it will not crash but instead will create a navigation bar.
     ///This will cause viewWill/DidAppear to be called twice if navigationController is nil in production
     var viewNavigationController: UINavigationController {
-        guard let navigationController = self.navigationController else {
-            assertionFailure("View requires navigation controller")
-            let newNavigationController = UINavigationController()
-            newNavigationController.isNavigationBarHidden = true
-            view.window?.rootViewController = newNavigationController
-            newNavigationController.pushViewController(
-                self,
-                animated: false
-            )
-            return newNavigationController
-        }
-        return navigationController
+        navigationController ?? newNavigationController
+    }
+}
+
+private extension UIViewController {
+    var newNavigationController: UINavigationController {
+        assertionFailure("View requires navigation controller")
+        let newNavigationController = UINavigationController()
+        newNavigationController.isNavigationBarHidden = true
+        view.window?.rootViewController = newNavigationController
+        newNavigationController.pushViewController(
+            self,
+            animated: false
+        )
+        return newNavigationController
     }
 }

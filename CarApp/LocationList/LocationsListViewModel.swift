@@ -28,7 +28,6 @@ final class LocationsListViewModel {
         self.useCase = LocationsListUseCase(interactor: configurator.locationsListInteractor)
         self.listOfLocations = models
         observeViewEffect()
-        getListOfLocations()
     }
 }
 
@@ -37,7 +36,7 @@ final class LocationsListViewModel {
 extension LocationsListViewModel {
     
     var numberOfRows: Int {
-        return listOfLocations.count
+        listOfLocations.count
     }
     
     func modelForIndex(index: Int) -> LocationModel {
@@ -71,23 +70,6 @@ private extension LocationsListViewModel {
 
     func showCarList(locationModel: LocationModel) {
         coordinator.showCarList(locationModel: locationModel, animated: true)
-    }
-    
-    func getListOfLocations() {
-        self.useCase.getListOfLocations()
-            .subscribe(onNext: { [unowned self] status in
-                switch status {
-                case .loading:
-                    break
-                case .error:
-                    break
-                case .success(let listOfLocations):
-//                    self.listOfLocations = listOfLocations
-                    print(listOfLocations)
-                    self.viewEffect.accept(.success)
-                }
-            })
-            .disposed(by: disposeBag)
     }
 }
 

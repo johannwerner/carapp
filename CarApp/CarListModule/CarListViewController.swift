@@ -7,7 +7,7 @@ import PureLayout
 final class CarListViewController: UIViewController {
     
     // MARK: Dependencies
-    private let viewModel: CarListViewModel
+    private let viewModel: CarListViewModel!
     
     // MARK: Rx
     private let viewAction = PublishRelay<CarListViewAction>()
@@ -27,8 +27,6 @@ final class CarListViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Life Cycle
 
     override func loadView() {
         view = UIView()
@@ -99,7 +97,7 @@ private extension CarListViewController {
 // MARK: - TableView
 extension CarListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows
+        viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

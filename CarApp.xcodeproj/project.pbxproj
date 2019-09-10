@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D08343B8AF355143F139E21 /* Pods_CarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */; };
+		932A78F62326D82D00BB8DFD /* Combine+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */; };
 		9334C0802306F83D00F21977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C07F2306F83D00F21977 /* AppDelegate.swift */; };
 		9334C0872306F83E00F21977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0862306F83E00F21977 /* Assets.xcassets */; };
 		9334C08A2306F83E00F21977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0882306F83E00F21977 /* LaunchScreen.storyboard */; };
@@ -88,6 +89,7 @@
 		19D42DD796D2884C76CD2E46 /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3041E4EEC5A95DA649A26FFF /* Pods-CarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.release.xcconfig"; path = "Target Support Files/Pods-CarApp/Pods-CarApp.release.xcconfig"; sourceTree = "<group>"; };
 		798A147854C701D34FD2C115 /* Pods_CarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIKit.swift"; sourceTree = "<group>"; };
 		9334C07C2306F83D00F21977 /* CarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9334C07F2306F83D00F21977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9334C0862306F83E00F21977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				9334C0D02306FA0B00F21977 /* Async.swift */,
 				9334C0D12306FA0B00F21977 /* ObservableType.swift */,
 				93DAFA18231DC12A005E23F9 /* ViewController.swift */,
+				932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */,
 			);
 			path = SuportingFiles;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				9334C0E92306FA0B00F21977 /* MapViewViewModel.swift in Sources */,
 				9334C0E02306FA0B00F21977 /* LocationsListViewController.swift in Sources */,
 				9334C0E52306FA0B00F21977 /* LocationsListViewModel.swift in Sources */,
+				932A78F62326D82D00BB8DFD /* Combine+UIKit.swift in Sources */,
 				9334C0E72306FA0B00F21977 /* LocationTableViewCell.swift in Sources */,
 				9376AAD623211A5F00284EF8 /* NonEmpty+String.swift in Sources */,
 				9334C0F22306FA0B00F21977 /* Position.swift in Sources */,
@@ -795,7 +799,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -814,7 +818,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

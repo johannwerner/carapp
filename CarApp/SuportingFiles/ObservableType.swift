@@ -2,7 +2,7 @@ import RxSwift
 
 extension ObservableType {
     public func async() -> Observable<Async<Element>> {
-        return map {
+        map {
             Async.success($0)
         }
         .catchError { error in

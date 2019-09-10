@@ -14,15 +14,15 @@ struct ColorTheme {}
 extension ColorTheme {
 
     static var licensePlateBackground: UIColor {
-        return ColorTheme.colorWith(red: 242, green: 242, blue: 242)
+        ColorTheme.colorWith(red: 242, green: 242, blue: 242)
     }
     
     static var circleDotBackground: UIColor {
-        return ColorTheme.colorWith(red: 175, green: 175, blue: 175)
+        ColorTheme.colorWith(red: 175, green: 175, blue: 175)
     }
     
     static var primaryAppColor: UIColor {
-        return ColorTheme.colorWith(red: 101, green: 179, blue: 239)
+        ColorTheme.colorWith(red: 101, green: 179, blue: 239)
     }
 }
 
@@ -33,7 +33,7 @@ private extension ColorTheme {
        Red/Blue /Green from 0 to 255 to what color. Do not use divide by /255 because this is being done here.
      */
     static func colorWith(red: UInt8, green: UInt8, blue: UInt8, alpha: CGFloat = 1.0) -> UIColor {
-        return UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: alpha)
+        UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: alpha)
     }
     
 }

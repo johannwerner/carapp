@@ -44,7 +44,7 @@ extension LocationsListCoordinator {
 extension LocationsListCoordinator {
     
     func showCarList(locationModel: LocationModel, animated: Bool) {
-        let configurator = CarListConfigurator(carListInteractor: CarListInteractorApi())
+        let configurator = CarListConfigurator(carListInteractor: CarListInteractorApi(location: locationModel.name))
         let coordinator = CarListCoordinator(
             navigationController: navigationController,
             configurator: configurator

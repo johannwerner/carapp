@@ -17,7 +17,7 @@ final class IntroductionModuleUseCase {
 
 extension IntroductionModuleUseCase {    
     func getListOfLocations() -> Observable<LocationsListStatus> {
-        return self.interactor.getListOfLocations()
+        interactor.getListOfLocations()
             .map { (result: Async<Any>) -> LocationsListStatus in
                 switch result {
                 case .loading:

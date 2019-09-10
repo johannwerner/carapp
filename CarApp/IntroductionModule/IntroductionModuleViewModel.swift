@@ -54,7 +54,7 @@ private extension  IntroductionModuleViewModel {
     }
     
     func getListOfLocations() {
-        self.useCase.getListOfLocations()
+        useCase.getListOfLocations()
             .subscribe(onNext: { [unowned self] status in
                 switch status {
                 case .loading:

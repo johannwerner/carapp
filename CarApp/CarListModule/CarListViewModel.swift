@@ -26,10 +26,7 @@ final class CarListViewModel {
         ) {
         self.coordinator = coordinator
         let interactor = configurator.carListInteractor
-        self.useCase = CarListUseCase(
-            interactor: interactor,
-            locationName: model.locationName
-        )
+        self.useCase = CarListUseCase(interactor: interactor)
         self.model = model
         observeViewEffect()
         getListOfCarsForHamburg()
@@ -41,15 +38,15 @@ final class CarListViewModel {
 extension CarListViewModel {
     
     var numberOfRows: Int {
-        return listOfCars.count
+        listOfCars.count
     }
     
     var locationName: String {
-        return model.locationName
+        model.locationName
     }
     
     func modelForIndexPath(index: Int) -> CarModel? {
-        return listOfCars[safe: index]
+        listOfCars[safe: index]
     }
     
     func bind(to viewAction: PublishRelay<CarListViewAction>) {
@@ -77,7 +74,7 @@ extension CarListViewModel {
 private extension CarListViewModel {
     
     func getListOfCarsForHamburg() {
-        self.useCase.getCarListForLocation()
+        useCase.getCarListForLocation()
             .subscribe(onNext: { [unowned self] status in
                 switch status {
                 case .loading:
