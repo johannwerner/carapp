@@ -21,6 +21,6 @@ extension IntroductionModuleInteractorApi {
 
 private extension IntroductionModuleInteractorApi {
     var url: String {
-        LocationsListConstants.locationsUrl
+        IntroductionConstants.locationsUrl
     }
 }

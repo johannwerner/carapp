@@ -16,9 +16,9 @@ final class IntroductionModuleUseCase {
 // MARK: - Public functions
 
 extension IntroductionModuleUseCase {    
-    func getListOfLocations() -> Observable<LocationsListStatus> {
+    func getListOfLocations() -> Observable<IntroductionModuleStatus> {
         interactor.getListOfLocations()
-            .map { (result: Async<Any>) -> LocationsListStatus in
+            .map { (result: Async<Any>) -> IntroductionModuleStatus in
                 switch result {
                 case .loading:
                     return .loading
@@ -26,8 +26,8 @@ extension IntroductionModuleUseCase {
                     guard let listOfArray = data as? Array<Dictionary<String, Any>> else {
                         return .error
                     }
-                    var listOfObjects = listOfArray.compactMap({ dict -> LocationModel? in
-                        let model = LocationModel.parse(from: dict)
+                    var listOfObjects = listOfArray.compactMap({ dict -> IntroductionLocationModel? in
+                        let model = IntroductionLocationModel.parse(from: dict)
                         return model
                     })
                     guard let firstObject = listOfObjects.first else {

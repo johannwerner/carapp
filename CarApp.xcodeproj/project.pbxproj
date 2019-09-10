@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5D08343B8AF355143F139E21 /* Pods_CarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */; };
+		931E403A2327D860008C0490 /* NonEmpty+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E402F2327D85F008C0490 /* NonEmpty+Collection.swift */; };
+		931E403B2327D860008C0490 /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40302327D85F008C0490 /* NonEmpty.swift */; };
+		931E403C2327D860008C0490 /* NonEmpty+BidirectionalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40312327D85F008C0490 /* NonEmpty+BidirectionalCollection.swift */; };
+		931E403D2327D860008C0490 /* NonEmpty+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40322327D85F008C0490 /* NonEmpty+Comparable.swift */; };
+		931E403E2327D860008C0490 /* NonEmpty+MutableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40332327D85F008C0490 /* NonEmpty+MutableCollection.swift */; };
+		931E403F2327D860008C0490 /* NonEmpty+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40342327D85F008C0490 /* NonEmpty+Random.swift */; };
+		931E40402327D860008C0490 /* NonEmpty+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40352327D85F008C0490 /* NonEmpty+Array.swift */; };
+		931E40412327D860008C0490 /* NonEmpty+SetAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40362327D85F008C0490 /* NonEmpty+SetAlgebra.swift */; };
+		931E40422327D860008C0490 /* NonEmpty+RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40372327D860008C0490 /* NonEmpty+RangeReplaceableCollection.swift */; };
+		931E40432327D860008C0490 /* NonEmpty+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40382327D860008C0490 /* NonEmpty+String.swift */; };
+		931E40442327D860008C0490 /* NonEmpty+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40392327D860008C0490 /* NonEmpty+Dictionary.swift */; };
 		932A78F62326D82D00BB8DFD /* Combine+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */; };
 		9334C0802306F83D00F21977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C07F2306F83D00F21977 /* AppDelegate.swift */; };
 		9334C0872306F83E00F21977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9334C0862306F83E00F21977 /* Assets.xcassets */; };
@@ -60,17 +71,6 @@
 		9334C10E23080BF300F21977 /* IntroductionModuleInteractorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10623080BF300F21977 /* IntroductionModuleInteractorApi.swift */; };
 		9334C10F23080BF300F21977 /* IntroductionModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10723080BF300F21977 /* IntroductionModuleViewModel.swift */; };
 		9334C11023080BF300F21977 /* IntroductionModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10823080BF300F21977 /* IntroductionModuleConfigurator.swift */; };
-		9376AACB23211A5F00284EF8 /* NonEmpty+MutableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AABF23211A5F00284EF8 /* NonEmpty+MutableCollection.swift */; };
-		9376AACC23211A5F00284EF8 /* NonEmpty+BidirectionalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC023211A5F00284EF8 /* NonEmpty+BidirectionalCollection.swift */; };
-		9376AACD23211A5F00284EF8 /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC123211A5F00284EF8 /* NonEmpty.swift */; };
-		9376AACE23211A5F00284EF8 /* NonEmpty+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC223211A5F00284EF8 /* NonEmpty+Array.swift */; };
-		9376AACF23211A5F00284EF8 /* NonEmpty+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC323211A5F00284EF8 /* NonEmpty+Collection.swift */; };
-		9376AAD023211A5F00284EF8 /* NonEmpty+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC423211A5F00284EF8 /* NonEmpty+Comparable.swift */; };
-		9376AAD123211A5F00284EF8 /* NonEmpty+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC523211A5F00284EF8 /* NonEmpty+Random.swift */; };
-		9376AAD223211A5F00284EF8 /* NonEmpty+RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC623211A5F00284EF8 /* NonEmpty+RangeReplaceableCollection.swift */; };
-		9376AAD323211A5F00284EF8 /* NonEmpty+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC723211A5F00284EF8 /* NonEmpty+Dictionary.swift */; };
-		9376AAD523211A5F00284EF8 /* NonEmpty+SetAlgebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AAC923211A5F00284EF8 /* NonEmpty+SetAlgebra.swift */; };
-		9376AAD623211A5F00284EF8 /* NonEmpty+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376AACA23211A5F00284EF8 /* NonEmpty+String.swift */; };
 		93DAFA19231DC12A005E23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAFA18231DC12A005E23F9 /* ViewController.swift */; };
 		9984AD252B5CA3E846938DA6 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A147854C701D34FD2C115 /* Pods_CarApp.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +89,17 @@
 		19D42DD796D2884C76CD2E46 /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3041E4EEC5A95DA649A26FFF /* Pods-CarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.release.xcconfig"; path = "Target Support Files/Pods-CarApp/Pods-CarApp.release.xcconfig"; sourceTree = "<group>"; };
 		798A147854C701D34FD2C115 /* Pods_CarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931E402F2327D85F008C0490 /* NonEmpty+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Collection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Collection.swift"; sourceTree = SOURCE_ROOT; };
+		931E40302327D85F008C0490 /* NonEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonEmpty.swift; path = CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty.swift; sourceTree = SOURCE_ROOT; };
+		931E40312327D85F008C0490 /* NonEmpty+BidirectionalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+BidirectionalCollection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+BidirectionalCollection.swift"; sourceTree = SOURCE_ROOT; };
+		931E40322327D85F008C0490 /* NonEmpty+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Comparable.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Comparable.swift"; sourceTree = SOURCE_ROOT; };
+		931E40332327D85F008C0490 /* NonEmpty+MutableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+MutableCollection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+MutableCollection.swift"; sourceTree = SOURCE_ROOT; };
+		931E40342327D85F008C0490 /* NonEmpty+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Random.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Random.swift"; sourceTree = SOURCE_ROOT; };
+		931E40352327D85F008C0490 /* NonEmpty+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Array.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Array.swift"; sourceTree = SOURCE_ROOT; };
+		931E40362327D85F008C0490 /* NonEmpty+SetAlgebra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+SetAlgebra.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+SetAlgebra.swift"; sourceTree = SOURCE_ROOT; };
+		931E40372327D860008C0490 /* NonEmpty+RangeReplaceableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+RangeReplaceableCollection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+RangeReplaceableCollection.swift"; sourceTree = SOURCE_ROOT; };
+		931E40382327D860008C0490 /* NonEmpty+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+String.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+String.swift"; sourceTree = SOURCE_ROOT; };
+		931E40392327D860008C0490 /* NonEmpty+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Dictionary.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Dictionary.swift"; sourceTree = SOURCE_ROOT; };
 		932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIKit.swift"; sourceTree = "<group>"; };
 		9334C07C2306F83D00F21977 /* CarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9334C07F2306F83D00F21977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,17 +156,6 @@
 		9334C10623080BF300F21977 /* IntroductionModuleInteractorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleInteractorApi.swift; sourceTree = "<group>"; };
 		9334C10723080BF300F21977 /* IntroductionModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleViewModel.swift; sourceTree = "<group>"; };
 		9334C10823080BF300F21977 /* IntroductionModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleConfigurator.swift; sourceTree = "<group>"; };
-		9376AABF23211A5F00284EF8 /* NonEmpty+MutableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+MutableCollection.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+MutableCollection.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC023211A5F00284EF8 /* NonEmpty+BidirectionalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+BidirectionalCollection.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+BidirectionalCollection.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC123211A5F00284EF8 /* NonEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonEmpty.swift; path = CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty.swift; sourceTree = SOURCE_ROOT; };
-		9376AAC223211A5F00284EF8 /* NonEmpty+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Array.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+Array.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC323211A5F00284EF8 /* NonEmpty+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Collection.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+Collection.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC423211A5F00284EF8 /* NonEmpty+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Comparable.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+Comparable.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC523211A5F00284EF8 /* NonEmpty+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Random.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+Random.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC623211A5F00284EF8 /* NonEmpty+RangeReplaceableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+RangeReplaceableCollection.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+RangeReplaceableCollection.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC723211A5F00284EF8 /* NonEmpty+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Dictionary.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+Dictionary.swift"; sourceTree = SOURCE_ROOT; };
-		9376AAC923211A5F00284EF8 /* NonEmpty+SetAlgebra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+SetAlgebra.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+SetAlgebra.swift"; sourceTree = SOURCE_ROOT; };
-		9376AACA23211A5F00284EF8 /* NonEmpty+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+String.swift"; path = "CarApp/SuportingFiles/Foundation/NonEmpty/NonEmpty+String.swift"; sourceTree = SOURCE_ROOT; };
 		93DAFA18231DC12A005E23F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE0C49055AE8D601007A43 /* Pods-CarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				9334C0AC2306FA0B00F21977 /* LocationList */,
 				9334C09F2306FA0B00F21977 /* CarListModule */,
 				9334C0B92306FA0B00F21977 /* MapViewModule */,
-				9334C0C22306FA0B00F21977 /* SuportingFiles */,
+				9334C0C22306FA0B00F21977 /* SupportingFiles */,
 				9334C07F2306F83D00F21977 /* AppDelegate.swift */,
 			);
 			path = CarApp;
@@ -326,7 +326,7 @@
 			path = MapViewModule;
 			sourceTree = "<group>";
 		};
-		9334C0C22306FA0B00F21977 /* SuportingFiles */ = {
+		9334C0C22306FA0B00F21977 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				9334C0862306F83E00F21977 /* Assets.xcassets */,
@@ -344,7 +344,7 @@
 				93DAFA18231DC12A005E23F9 /* ViewController.swift */,
 				932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */,
 			);
-			path = SuportingFiles;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		9334C0C52306FA0B00F21977 /* SharedModels */ = {
@@ -399,17 +399,17 @@
 		9376AAA62321195700284EF8 /* NonEmpty */ = {
 			isa = PBXGroup;
 			children = (
-				9376AAC123211A5F00284EF8 /* NonEmpty.swift */,
-				9376AAC223211A5F00284EF8 /* NonEmpty+Array.swift */,
-				9376AAC023211A5F00284EF8 /* NonEmpty+BidirectionalCollection.swift */,
-				9376AAC323211A5F00284EF8 /* NonEmpty+Collection.swift */,
-				9376AAC423211A5F00284EF8 /* NonEmpty+Comparable.swift */,
-				9376AAC723211A5F00284EF8 /* NonEmpty+Dictionary.swift */,
-				9376AABF23211A5F00284EF8 /* NonEmpty+MutableCollection.swift */,
-				9376AAC523211A5F00284EF8 /* NonEmpty+Random.swift */,
-				9376AAC623211A5F00284EF8 /* NonEmpty+RangeReplaceableCollection.swift */,
-				9376AAC923211A5F00284EF8 /* NonEmpty+SetAlgebra.swift */,
-				9376AACA23211A5F00284EF8 /* NonEmpty+String.swift */,
+				931E40302327D85F008C0490 /* NonEmpty.swift */,
+				931E40352327D85F008C0490 /* NonEmpty+Array.swift */,
+				931E40312327D85F008C0490 /* NonEmpty+BidirectionalCollection.swift */,
+				931E402F2327D85F008C0490 /* NonEmpty+Collection.swift */,
+				931E40322327D85F008C0490 /* NonEmpty+Comparable.swift */,
+				931E40392327D860008C0490 /* NonEmpty+Dictionary.swift */,
+				931E40332327D85F008C0490 /* NonEmpty+MutableCollection.swift */,
+				931E40342327D85F008C0490 /* NonEmpty+Random.swift */,
+				931E40372327D860008C0490 /* NonEmpty+RangeReplaceableCollection.swift */,
+				931E40362327D85F008C0490 /* NonEmpty+SetAlgebra.swift */,
+				931E40382327D860008C0490 /* NonEmpty+String.swift */,
 			);
 			name = NonEmpty;
 			path = "../../../../../Downloads/swift-nonempty-master/Sources/NonEmpty";
@@ -583,13 +583,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931E403D2327D860008C0490 /* NonEmpty+Comparable.swift in Sources */,
 				9334C0D82306FA0B00F21977 /* CarModel.swift in Sources */,
 				9334C10E23080BF300F21977 /* IntroductionModuleInteractorApi.swift in Sources */,
-				9376AAD123211A5F00284EF8 /* NonEmpty+Random.swift in Sources */,
 				9334C10B23080BF300F21977 /* IntroductionModuleViewController.swift in Sources */,
 				9334C0E42306FA0B00F21977 /* LocationsListCoordinator.swift in Sources */,
 				9334C10F23080BF300F21977 /* IntroductionModuleViewModel.swift in Sources */,
-				9376AACF23211A5F00284EF8 /* NonEmpty+Collection.swift in Sources */,
 				9334C0DD2306FA0B00F21977 /* CarTableViewCell.swift in Sources */,
 				9334C0D72306FA0B00F21977 /* CarListCoordinator.swift in Sources */,
 				9334C0E32306FA0B00F21977 /* LocationModel.swift in Sources */,
@@ -598,47 +597,48 @@
 				9334C0E52306FA0B00F21977 /* LocationsListViewModel.swift in Sources */,
 				932A78F62326D82D00BB8DFD /* Combine+UIKit.swift in Sources */,
 				9334C0E72306FA0B00F21977 /* LocationTableViewCell.swift in Sources */,
-				9376AAD623211A5F00284EF8 /* NonEmpty+String.swift in Sources */,
 				9334C0F22306FA0B00F21977 /* Position.swift in Sources */,
-				9376AACD23211A5F00284EF8 /* NonEmpty.swift in Sources */,
 				9334C11023080BF300F21977 /* IntroductionModuleConfigurator.swift in Sources */,
 				9334C0F02306FA0B00F21977 /* NSObject+CarApp.swift in Sources */,
 				9334C0D62306FA0B00F21977 /* CarListViewController.swift in Sources */,
 				9334C0FA2306FA0B00F21977 /* ObservableType.swift in Sources */,
 				9334C0F52306FA0B00F21977 /* Array+CarApp.swift in Sources */,
 				9334C0D92306FA0B00F21977 /* CarListInteractorApi.swift in Sources */,
-				9376AAD223211A5F00284EF8 /* NonEmpty+RangeReplaceableCollection.swift in Sources */,
 				9334C0D42306FA0B00F21977 /* CarListInteractor.swift in Sources */,
 				9334C10D23080BF300F21977 /* IntroductionModuleModel.swift in Sources */,
+				931E40432327D860008C0490 /* NonEmpty+String.swift in Sources */,
 				9334C0F42306FA0B00F21977 /* String+CarApp.swift in Sources */,
 				9334C0DE2306FA0B00F21977 /* LocationsListConfigurator.swift in Sources */,
+				931E40422327D860008C0490 /* NonEmpty+RangeReplaceableCollection.swift in Sources */,
 				9334C10923080BF300F21977 /* IntroductionModuleCoordinator.swift in Sources */,
+				931E40442327D860008C0490 /* NonEmpty+Dictionary.swift in Sources */,
+				931E40402327D860008C0490 /* NonEmpty+Array.swift in Sources */,
 				9334C0F32306FA0B00F21977 /* Decodable+Utils.swift in Sources */,
 				9334C0EF2306FA0B00F21977 /* MapViewConfigurator.swift in Sources */,
 				9334C0EB2306FA0B00F21977 /* MapViewInteractor.swift in Sources */,
 				9334C0E22306FA0B00F21977 /* LocationsListInteractorApi.swift in Sources */,
-				9376AACB23211A5F00284EF8 /* NonEmpty+MutableCollection.swift in Sources */,
 				9334C0ED2306FA0B00F21977 /* MapViewCoordinator.swift in Sources */,
 				93DAFA19231DC12A005E23F9 /* ViewController.swift in Sources */,
 				9334C0EE2306FA0B00F21977 /* MapViewModel.swift in Sources */,
 				9334C0F92306FA0B00F21977 /* Async.swift in Sources */,
 				9334C0F82306FA0B00F21977 /* ColorTheme.swift in Sources */,
 				9334C0EA2306FA0B00F21977 /* MapViewInteractorApi.swift in Sources */,
-				9376AACC23211A5F00284EF8 /* NonEmpty+BidirectionalCollection.swift in Sources */,
-				9376AAD523211A5F00284EF8 /* NonEmpty+SetAlgebra.swift in Sources */,
+				931E40412327D860008C0490 /* NonEmpty+SetAlgebra.swift in Sources */,
+				931E403C2327D860008C0490 /* NonEmpty+BidirectionalCollection.swift in Sources */,
+				931E403A2327D860008C0490 /* NonEmpty+Collection.swift in Sources */,
+				931E403E2327D860008C0490 /* NonEmpty+MutableCollection.swift in Sources */,
 				9334C0802306F83D00F21977 /* AppDelegate.swift in Sources */,
+				931E403F2327D860008C0490 /* NonEmpty+Random.swift in Sources */,
 				9334C0D52306FA0B00F21977 /* CarListViewModel.swift in Sources */,
 				9334C10C23080BF300F21977 /* IntroductionModuleInteractor.swift in Sources */,
 				9334C0E12306FA0B00F21977 /* LocationsListInteractor.swift in Sources */,
 				9334C0F62306FA0B00F21977 /* CircleView.swift in Sources */,
 				9334C0DF2306FA0B00F21977 /* LocationsListUseCase.swift in Sources */,
 				9334C0E82306FA0B00F21977 /* MapViewViewController.swift in Sources */,
-				9376AAD323211A5F00284EF8 /* NonEmpty+Dictionary.swift in Sources */,
 				9334C0DA2306FA0B00F21977 /* CarListModel.swift in Sources */,
-				9376AAD023211A5F00284EF8 /* NonEmpty+Comparable.swift in Sources */,
 				9334C0EC2306FA0B00F21977 /* MapViewUseCase.swift in Sources */,
-				9376AACE23211A5F00284EF8 /* NonEmpty+Array.swift in Sources */,
 				9334C10A23080BF300F21977 /* IntroductionModuleUseCase.swift in Sources */,
+				931E403B2327D860008C0490 /* NonEmpty.swift in Sources */,
 				9334C0E62306FA0B00F21977 /* LocationsListModel.swift in Sources */,
 				9334C0DB2306FA0B00F21977 /* CarListConfigurator.swift in Sources */,
 				9334C0DC2306FA0B00F21977 /* CarListUseCase.swift in Sources */,
@@ -798,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
+				INFOPLIST_FILE = CarApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,7 +817,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CarApp/SuportingFiles/Info.plist;
+				INFOPLIST_FILE = CarApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

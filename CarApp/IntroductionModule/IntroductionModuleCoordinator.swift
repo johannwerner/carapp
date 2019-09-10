@@ -42,7 +42,7 @@ extension  IntroductionModuleCoordinator {
 
 extension  IntroductionModuleCoordinator {
 
-    func showLocationList(models: NonEmpty<[LocationModel]>, animated: Bool) {
+    func showLocationList(models: NonEmpty<[IntroductionLocationModel]>, animated: Bool) {
         let configurator = LocationsListConfigurator(
             locationsListInteractor: LocationsListInteractorApi()
         )
@@ -50,6 +50,27 @@ extension  IntroductionModuleCoordinator {
             navigationController: navigationController,
             configurator: configurator
         )
-        coordinator.showLocationList(models: models, animated: true)
+
+        guard let locationArray = models.convert() else {
+            assertionFailure("Conversion failed")
+            return
+        }
+        coordinator.showLocationList(models: locationArray, animated: true)
+    }
+}
+
+private extension NonEmptyArray where Iterator.Element == IntroductionLocationModel {
+    
+    func convert() -> NonEmptyArray<LocationModel>? {
+        map { model -> LocationModel in
+            LocationModel(introductionLocationModel: model)
+        }
+    }
+    
+}
+
+private extension LocationModel {
+    init(introductionLocationModel: IntroductionLocationModel) {
+        self.name = introductionLocationModel.name
     }
 }

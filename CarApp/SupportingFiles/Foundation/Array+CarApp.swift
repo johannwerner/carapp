@@ -19,3 +19,20 @@ extension NonEmptyArray {
         indices.contains(index) ? self[index] : nil
     }
 }
+
+extension Array {
+    func convertToNonEmptyArray() -> NonEmptyArray<Element>? {
+        
+        guard let first = self.first else {
+            assertionFailure("array is empty")
+            return nil
+        }
+        var nonEmpty = NonEmptyArray(first)
+        var newArray = self
+        newArray.remove(at: 0)
+        newArray.forEach { element in
+            nonEmpty.append(element)
+        }
+        return nonEmpty
+    }
+}
