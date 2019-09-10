@@ -11,13 +11,12 @@ import UIKit
 extension UIViewController {
     
     // MARK: NavigationController
-    ///Non nullable reference to the viewController's navigation controller
-    ///
-    ///App achitecture makes sure every viewcontroller will have a nivagtion controller.
-    ///Therefore navigationController cannot be nil.
+    /// Non-nullable reference to the viewController's navigation controller
+    /// App architecture makes sure every ViewController will have a navigation controller.
+    /// Therefore navigationController cannot be nil.
     /// If navigationController is nil there are mistakes in the app achitecture which should be fixed.
-    ///in production it will not crash but instead will create a navigation bar.
-    ///This will cause viewWill/DidAppear to be called twice if navigationController is nil in production
+    /// in production it will not crash but instead will create a navigation bar.
+    /// This will cause viewWill/DidAppear to be called twice if navigationController is nil in production
     var viewNavigationController: UINavigationController {
         navigationController ?? newNavigationController
     }

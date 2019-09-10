@@ -10,9 +10,11 @@ extension IntroductionModuleInteractorApi {
     
     func getListOfLocations() -> Observable<Async<Any>> {
         RxAlamofire
-            .requestJSON(.get,
-                         url,
-                         parameters: nil)
+            .requestJSON(
+                .get,
+                 url,
+                 parameters: nil
+            )
             .flatMap { (response, json) -> Observable<Any> in
                 return Observable.just(json)
             }.async()

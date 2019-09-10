@@ -21,10 +21,11 @@ extension NonEmptyArray {
 }
 
 extension Array {
+    ///Converts array to NonEmptyArray
+    /// Returns nil if array is empty
     func convertToNonEmptyArray() -> NonEmptyArray<Element>? {
-        
         guard let first = self.first else {
-            assertionFailure("array is empty")
+            debugPrint("array is empty")
             return nil
         }
         var nonEmpty = NonEmptyArray(first)
