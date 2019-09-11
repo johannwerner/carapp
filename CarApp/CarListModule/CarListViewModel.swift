@@ -5,7 +5,6 @@ import RxSwift
 /// - Note: A view model can refer to one or more use cases.
 final class CarListViewModel {
     // MARK: - Properties
-    private var listOfCars: [CarModel] = []
     var model: CarListModel
     
     // MARK: MvRx
@@ -20,7 +19,8 @@ final class CarListViewModel {
 
     // MARK: - Life cycle
     
-    init(coordinator: CarListCoordinator,
+    init(
+         coordinator: CarListCoordinator,
          configurator: CarListConfigurator,
          model: CarListModel
         ) {
@@ -29,7 +29,6 @@ final class CarListViewModel {
         self.useCase = CarListUseCase(interactor: interactor)
         self.model = model
         observeViewEffect()
-        getListOfCarsForHamburg()
     }
 }
 
@@ -38,15 +37,22 @@ final class CarListViewModel {
 extension CarListViewModel {
     
     var numberOfRows: Int {
-        listOfCars.count
+        model.carModels.count
     }
     
     var locationName: String {
         model.locationName
     }
     
-    func modelForIndexPath(index: Int) -> CarModel? {
-        listOfCars[safe: index]
+    func modelForIndexPath(index: Int) -> CarModel {
+        if index == 0 {
+           return model.carModels.first
+        }
+        guard let location = model.carModels[safe: .tail(index - 1)] else {
+            assertionFailure("index out of bounds")
+            return model.carModels.first
+        }
+        return location
     }
     
     func bind(to viewAction: PublishRelay<CarListViewAction>) {
@@ -55,10 +61,7 @@ extension CarListViewModel {
             .subscribe(onNext: { [unowned self] viewAction in
                 switch viewAction {
                 case .selectedIndex(let index):
-                    guard let model = self.modelForIndexPath(index: index) else {
-                        assertionFailure("model is nil")
-                        return
-                    }
+                    let model = self.modelForIndexPath(index: index)
                     self.coordinator.showMapView(
                         position: model.position,
                         animated: true
@@ -73,7 +76,7 @@ extension CarListViewModel {
 
 private extension CarListViewModel {
     
-    func getListOfCarsForHamburg() {
+    func getListOfCarsForLocation() {
         useCase.getCarListForLocation()
             .subscribe(onNext: { [unowned self] status in
                 switch status {
@@ -82,7 +85,7 @@ private extension CarListViewModel {
                 case .error:
                     break
                 case .success(let listOfCars):
-                  self.listOfCars = listOfCars
+                    self.model.carModels = listOfCars
                     self.viewEffect.accept(.success)
                 }
             })

@@ -39,7 +39,10 @@ extension CarListUseCase {
                         let carModel = CarModel.parse(from: dict)
                         return carModel
                     })
-                    return .success(listOfCarModels)
+                    guard let nonEmpty = listOfCarModels.convertToNonEmptyArray() else {
+                        return .error
+                    }
+                    return .success(nonEmpty)
                 case .error:
                     return .error
                 }

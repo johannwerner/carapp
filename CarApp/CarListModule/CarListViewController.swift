@@ -106,10 +106,7 @@ extension CarListViewController: UITableViewDataSource, UITableViewDelegate {
             assertionFailure("carListCell is nil")
             return cell
         }
-        guard let carModel = viewModel.modelForIndexPath(index: indexPath.row) else {
-            assertionFailure("carModel is nil")
-            return cell
-        }
+        let carModel = viewModel.modelForIndexPath(index: indexPath.row)
         carListCell.fill(with: carModel)
         return carListCell
     }

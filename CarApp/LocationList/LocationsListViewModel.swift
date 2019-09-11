@@ -69,7 +69,19 @@ extension LocationsListViewModel {
 private extension LocationsListViewModel {
 
     func showCarList(locationModel: LocationModel) {
-        coordinator.showCarList(locationModel: locationModel, animated: true)
+        useCase.getCarListForLocation(location: locationModel.name)
+             .subscribe(onNext: { [unowned self] status in
+                 switch status {
+                 case .loading:
+                    self.viewEffect.accept(.loading)
+                 case .error:
+                     break
+                 case .success(let listOfCars):
+                    self.viewEffect.accept(.success)
+                    self.coordinator.showCarList(models: listOfCars, locationModel: locationModel, animated: true)
+                 }
+             })
+             .disposed(by: disposeBag)
     }
 }
 
@@ -83,8 +95,9 @@ private extension LocationsListViewModel {
             .asObservable()
             .subscribe(onNext: { effect in
                 switch effect {
-                case .success:
-                    break
+                case .success: break
+                case .loading: break
+                case   .error: break
                 }
             })
             .disposed(by: disposeBag)

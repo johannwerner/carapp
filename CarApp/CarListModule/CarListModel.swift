@@ -4,7 +4,7 @@ import RxCocoa
 enum CarListStatus {
     case loading
     case error
-    case success([CarModel])
+    case success(NonEmptyArray<CarModel>)
 }
 
 /// View effect enum for CarList.
@@ -27,5 +27,5 @@ struct CLMLComments {
 
 struct CarListModel {
     var locationName: String
-    var carModels: [CarModel]
+    var carModels: NonEmptyArray<CarModel>
 }

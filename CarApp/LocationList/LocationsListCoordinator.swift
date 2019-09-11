@@ -42,16 +42,32 @@ extension LocationsListCoordinator {
 // MARK: - Navigation OUT
 
 extension LocationsListCoordinator {
-    
-    func showCarList(locationModel: LocationModel, animated: Bool) {
+
+    func showCarList(models: NonEmptyArray<LocationCarModel>, locationModel: LocationModel, animated: Bool) {
         let configurator = CarListConfigurator(carListInteractor: CarListInteractorApi(location: locationModel.name))
         let coordinator = CarListCoordinator(
             navigationController: navigationController,
             configurator: configurator
         )
+        let carModels = models.map { locationCarModel -> CarModel in
+            CarModel(locationCarModel: locationCarModel)
+        }
         coordinator.showCarList(
+            models: carModels,
             locationName: locationModel.name,
             animated: animated
+        )
+    }
+}
+
+private extension CarModel {
+    init(locationCarModel: LocationCarModel) {
+        self = CarModel(
+            numberPlate: locationCarModel.numberPlate,
+            vin: locationCarModel.vin,
+            model: locationCarModel.model,
+            fuel: locationCarModel.fuel,
+            position: locationCarModel.position
         )
     }
 }

@@ -13,6 +13,7 @@ final class LocationsListViewController: UIViewController {
     
     // MARK: View components
     private let tableView = UITableView()
+    private let activityView = ActivityView()
     
     // MARK: Tooling
     private let disposeBag = DisposeBag()
@@ -86,7 +87,11 @@ private extension LocationsListViewController {
             .subscribe(onNext: { [unowned self] effect in
                 switch effect {
                 case .success:
-                    self.tableView.reloadData()
+                    self.activityView.hideView()
+                case .loading:
+                    self.activityView.showView()
+                case .error:
+                    self.activityView.hideView()
                 }
             })
             .disposed(by: disposeBag)
@@ -117,3 +122,64 @@ extension LocationsListViewController: UITableViewDataSource, UITableViewDelegat
     }
 }
 
+// MARK: - Activity View
+final private class ActivityView: UIView {
+    // MARK: - Properties
+    private var activityIndicator = UIActivityIndicatorView()
+    private var activityView = UIView()
+    // MARK: - Life Cycle
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+extension ActivityView {
+    func showView() {
+        let currentWindow = UIApplication.mainWindow
+        currentWindow?.endEditing(true)
+        currentWindow?.addSubview(self)
+        autoSetDimension(.height, toSize: UIScreen.main.bounds.size.height)
+        autoSetDimension(.width, toSize: UIScreen.main.bounds.size.width)
+        autoCenterInSuperview()
+        layoutIfNeeded()
+
+        self.backgroundColor = ColorTheme.alpha2
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func hideView() {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: .curveEaseOut,
+            animations: { [weak self] in
+            self?.backgroundColor = .clear
+        }, completion: { [weak self] _ in
+            self?.activityIndicator.stopAnimating()
+            self?.removeFromSuperview()
+        })
+    }
+}
+
+private extension ActivityView {
+    private func setUpUI() {
+        addSubview(activityView)
+        activityView.autoCenterInSuperview()
+        activityView.autoSetDimensions(to: CGSize(width: 80, height: 80))
+        activityView.backgroundColor = ColorTheme.alpha6
+        activityView.layer.cornerRadius = 8.0
+        
+        activityView.addSubview(activityIndicator)
+        activityIndicator.autoCenterInSuperview()
+        activityIndicator.style = .large
+        activityIndicator.color = .white
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.stopAnimating()
+    }
+}

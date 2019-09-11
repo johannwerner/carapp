@@ -71,6 +71,8 @@
 		9334C10E23080BF300F21977 /* IntroductionModuleInteractorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10623080BF300F21977 /* IntroductionModuleInteractorApi.swift */; };
 		9334C10F23080BF300F21977 /* IntroductionModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10723080BF300F21977 /* IntroductionModuleViewModel.swift */; };
 		9334C11023080BF300F21977 /* IntroductionModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334C10823080BF300F21977 /* IntroductionModuleConfigurator.swift */; };
+		938707AC23280C8100F2ED31 /* LocationCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938707AB23280C8100F2ED31 /* LocationCarModel.swift */; };
+		938707AE2328EE1E00F2ED31 /* UIAplication+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938707AD2328EE1E00F2ED31 /* UIAplication+Window.swift */; };
 		93DAFA19231DC12A005E23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAFA18231DC12A005E23F9 /* ViewController.swift */; };
 		9984AD252B5CA3E846938DA6 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A147854C701D34FD2C115 /* Pods_CarApp.framework */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,8 @@
 		9334C10623080BF300F21977 /* IntroductionModuleInteractorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleInteractorApi.swift; sourceTree = "<group>"; };
 		9334C10723080BF300F21977 /* IntroductionModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleViewModel.swift; sourceTree = "<group>"; };
 		9334C10823080BF300F21977 /* IntroductionModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionModuleConfigurator.swift; sourceTree = "<group>"; };
+		938707AB23280C8100F2ED31 /* LocationCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCarModel.swift; sourceTree = "<group>"; };
+		938707AD2328EE1E00F2ED31 /* UIAplication+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAplication+Window.swift"; sourceTree = "<group>"; };
 		93DAFA18231DC12A005E23F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE0C49055AE8D601007A43 /* Pods-CarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,8 +256,8 @@
 				9334C0AA2306FA0B00F21977 /* ResubleViews */,
 				9334C0A22306FA0B00F21977 /* CarListViewController.swift */,
 				9334C0A12306FA0B00F21977 /* CarListViewModel.swift */,
-				9334C0A92306FA0B00F21977 /* CarListUseCase.swift */,
 				9334C0A72306FA0B00F21977 /* CarListModel.swift */,
+				9334C0A92306FA0B00F21977 /* CarListUseCase.swift */,
 				9334C0A82306FA0B00F21977 /* CarListConfigurator.swift */,
 				9334C0A62306FA0B00F21977 /* CarListInteractorApi.swift */,
 				9334C0A02306FA0B00F21977 /* CarListInteractor.swift */,
@@ -285,8 +289,8 @@
 				9334C0B72306FA0B00F21977 /* ReusableViews */,
 				9334C0AF2306FA0B00F21977 /* LocationsListViewController.swift */,
 				9334C0B52306FA0B00F21977 /* LocationsListViewModel.swift */,
-				9334C0AE2306FA0B00F21977 /* LocationsListUseCase.swift */,
 				9334C0B62306FA0B00F21977 /* LocationsListModel.swift */,
+				9334C0AE2306FA0B00F21977 /* LocationsListUseCase.swift */,
 				9334C0AD2306FA0B00F21977 /* LocationsListConfigurator.swift */,
 				9334C0B12306FA0B00F21977 /* LocationsListInteractorApi.swift */,
 				9334C0B02306FA0B00F21977 /* LocationsListInteractor.swift */,
@@ -299,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				9334C0B32306FA0B00F21977 /* LocationModel.swift */,
+				938707AB23280C8100F2ED31 /* LocationCarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,8 +321,8 @@
 			children = (
 				9334C0BA2306FA0B00F21977 /* MapViewViewController.swift */,
 				9334C0BB2306FA0B00F21977 /* MapViewViewModel.swift */,
-				9334C0BE2306FA0B00F21977 /* MapViewUseCase.swift */,
 				9334C0C02306FA0B00F21977 /* MapViewModel.swift */,
+				9334C0BE2306FA0B00F21977 /* MapViewUseCase.swift */,
 				9334C0C12306FA0B00F21977 /* MapViewConfigurator.swift */,
 				9334C0BC2306FA0B00F21977 /* MapViewInteractorApi.swift */,
 				9334C0BD2306FA0B00F21977 /* MapViewInteractor.swift */,
@@ -362,6 +367,7 @@
 				9334C0C82306FA0B00F21977 /* Decodable+Utils.swift */,
 				9334C0C92306FA0B00F21977 /* String+CarApp.swift */,
 				9334C0CA2306FA0B00F21977 /* Array+CarApp.swift */,
+				938707AD2328EE1E00F2ED31 /* UIAplication+Window.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -386,8 +392,8 @@
 			children = (
 				9334C10323080BF300F21977 /* IntroductionModuleViewController.swift */,
 				9334C10723080BF300F21977 /* IntroductionModuleViewModel.swift */,
-				9334C10223080BF300F21977 /* IntroductionModuleUseCase.swift */,
 				9334C10523080BF300F21977 /* IntroductionModuleModel.swift */,
+				9334C10223080BF300F21977 /* IntroductionModuleUseCase.swift */,
 				9334C10423080BF300F21977 /* IntroductionModuleInteractor.swift */,
 				9334C10623080BF300F21977 /* IntroductionModuleInteractorApi.swift */,
 				9334C10823080BF300F21977 /* IntroductionModuleConfigurator.swift */,
@@ -588,10 +594,12 @@
 				9334C10E23080BF300F21977 /* IntroductionModuleInteractorApi.swift in Sources */,
 				9334C10B23080BF300F21977 /* IntroductionModuleViewController.swift in Sources */,
 				9334C0E42306FA0B00F21977 /* LocationsListCoordinator.swift in Sources */,
+				938707AC23280C8100F2ED31 /* LocationCarModel.swift in Sources */,
 				9334C10F23080BF300F21977 /* IntroductionModuleViewModel.swift in Sources */,
 				9334C0DD2306FA0B00F21977 /* CarTableViewCell.swift in Sources */,
 				9334C0D72306FA0B00F21977 /* CarListCoordinator.swift in Sources */,
 				9334C0E32306FA0B00F21977 /* LocationModel.swift in Sources */,
+				938707AE2328EE1E00F2ED31 /* UIAplication+Window.swift in Sources */,
 				9334C0E92306FA0B00F21977 /* MapViewViewModel.swift in Sources */,
 				9334C0E02306FA0B00F21977 /* LocationsListViewController.swift in Sources */,
 				9334C0E52306FA0B00F21977 /* LocationsListViewModel.swift in Sources */,

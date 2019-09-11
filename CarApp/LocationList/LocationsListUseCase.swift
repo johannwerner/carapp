@@ -16,4 +16,28 @@ final class LocationsListUseCase {
 
 // MARK: - Public functions
 
-extension LocationsListUseCase {}
+extension LocationsListUseCase {
+    func getCarListForLocation(location: String) -> Observable<LocationsListStatus> {
+        interactor.getListOfCarsForLocation(location: location)
+            .map { (result: Async<Any>) -> LocationsListStatus in
+                switch result {
+                case .loading:
+                    return .loading
+                case .success(let data):
+                    guard let listOfArray = data as? Array<Dictionary<String, Any>>  else {
+                        return .error
+                    }
+                    let listOfCarModels = listOfArray.compactMap({ dict -> LocationCarModel? in
+                        let carModel = LocationCarModel.parse(from: dict)
+                        return carModel
+                    })
+                    guard let nonEmptyArray = listOfCarModels.convertToNonEmptyArray() else {
+                        return .error
+                    }
+                    return .success(nonEmptyArray)
+                case .error:
+                    return .error
+                }
+        }
+    }
+}

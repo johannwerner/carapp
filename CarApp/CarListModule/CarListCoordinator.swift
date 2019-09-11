@@ -27,12 +27,13 @@ final class CarListCoordinator {
 extension CarListCoordinator {
     
     func showCarList(
+        models: NonEmptyArray<CarModel>,
         locationName: String,
         animated: Bool
         ) {
         let model = CarListModel(
             locationName: locationName,
-            carModels: []
+            carModels: models
         )
         let viewModel = CarListViewModel(
             coordinator: self,

@@ -24,6 +24,14 @@ extension ColorTheme {
     static var primaryAppColor: UIColor {
         ColorTheme.colorWith(red: 101, green: 179, blue: 239)
     }
+    
+    static var alpha6: UIColor {
+        ColorTheme.colorWith(red: 0, green: 0, blue: 0, alpha: 0.6)
+    }
+    
+    static var alpha2: UIColor {
+        ColorTheme.colorWith(red: 0, green: 0, blue: 0, alpha: 0.2)
+    }
 }
 
 // MARK: - Private Methods

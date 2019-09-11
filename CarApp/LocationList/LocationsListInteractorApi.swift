@@ -5,10 +5,33 @@ import RxAlamofire
 /// - Requires: `RxSwift`, `Async`, `RxAlamofire`
 
 final class LocationsListInteractorApi: LocationsListInteractor {
+       
+        // MARK: - Properties
+        
+        // MARK: Dependencies
+        
+        // MARK: - Life cycle
+    }
+
+extension LocationsListInteractorApi {
+    // MARK: - Internal
     
-    // MARK: Dependencies
-    
-    // MARK: - Life cycle
+    func getListOfCarsForLocation(location: String) -> Observable<Async<Any>> {
+        RxAlamofire
+            .requestJSON(
+                .get,
+                 url(location: location),
+                 parameters: nil
+            )
+            .flatMap { (response, json) -> Observable<Any> in
+                return Observable.just(json)
+            }.async()
+    }
 }
 
-extension LocationsListInteractorApi {}
+private extension LocationsListInteractorApi {
+    func url(location: String) -> String {
+        String(format: LocationListConstants.carListUrl, location)
+    }
+}
+
