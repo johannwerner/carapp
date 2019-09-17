@@ -12,7 +12,7 @@ final class CarListTestInteractor: CarListInteractor {
 extension CarListTestInteractor {
     
     // MARK: - Internal
-    func getListOfCarsForLocation(location: String) -> Observable<Async<Any>> {
+    func getListOfCarsForLocation() -> Observable<Async<Any>>  {
         let dictionary: [String : Any] = [
             "numberPlate": "HDE537EC",
             "vin": "test",

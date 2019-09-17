@@ -51,26 +51,18 @@ extension  IntroductionModuleCoordinator {
             configurator: configurator
         )
 
-        guard let locationArray = models.convert() else {
-            assertionFailure("Conversion failed")
-            return
-        }
-        coordinator.showLocationList(models: locationArray, animated: true)
+        coordinator.showLocationList(
+            models: models.convert(),
+            animated: true
+        )
     }
 }
 
 private extension NonEmptyArray where Iterator.Element == IntroductionLocationModel {
     
-    func convert() -> NonEmptyArray<LocationModel>? {
+    func convert() -> NonEmptyArray<LocationModel> {
         map { model -> LocationModel in
-            LocationModel(introductionLocationModel: model)
+            LocationModel(name: model.name)
         }
-    }
-    
-}
-
-private extension LocationModel {
-    init(introductionLocationModel: IntroductionLocationModel) {
-        self.name = introductionLocationModel.name
     }
 }

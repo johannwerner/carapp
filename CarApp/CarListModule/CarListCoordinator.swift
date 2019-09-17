@@ -10,7 +10,6 @@ final class CarListCoordinator {
     
     // MARK: Tooling
     
-
     // MARK: - Life cycle
     
     init(
@@ -55,15 +54,21 @@ extension CarListCoordinator {
         position: Position,
         animated: Bool
         ) {
-        let mapViewInteractor = MapViewInteractorApi()
-        let mapViewConfigurator = MapViewConfigurator(mapViewInteractor: mapViewInteractor)
-        let mapViewcoordinator = MapViewCoordinator(
-            navigationController: navigationController,
-            configurator: mapViewConfigurator
-        )
         mapViewcoordinator.showMapView(
             position: position,
             animated: animated
         )
+    }
+}
+
+private extension CarListCoordinator {
+    var mapViewConfigurator: MapViewConfigurator { MapViewConfigurator(mapViewInteractor: MapViewInteractorApi())
+    }
+    
+    var mapViewcoordinator: MapViewCoordinator {
+        MapViewCoordinator(
+          navigationController: navigationController,
+          configurator: mapViewConfigurator
+      )
     }
 }

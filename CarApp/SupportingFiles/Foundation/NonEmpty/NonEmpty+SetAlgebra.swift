@@ -73,13 +73,7 @@ extension NonEmpty where C: SetAlgebra, C.Element: Hashable & Comparable {
       }
       return (inserted, memberAfterInsert)
   }
-
-// TODO: Implement
-//  @discardableResult
-//  public mutating func update(with newMember: Collection.Element) -> Collection.Element? {
-//    fatalError()
-//  }
-
+    
   public mutating func formUnion(_ other: NonEmpty) {
     self.tail.insert(self.head)
     self.tail.insert(other.head)

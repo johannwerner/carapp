@@ -1,4 +1,5 @@
 import RxSwift
+import Foundation
 
 /// Retrieve a list of cars from outside source
 /// - Requires: `RxSwift`, `Async`
@@ -25,19 +26,17 @@ final class CarListUseCase {
 extension CarListUseCase {
     
     func getCarListForLocation() -> Observable<CarListStatus> {
-        interactor.getListOfCarsForLocation()
+        interactor.getListOfCarsForLocation(location: locationName)
             .map { (result: Async<Any>) -> CarListStatus in
                 switch result {
                 case .loading:
                     return .loading
-                case .success(let data):
-                    
+                case .success(let data):                    
                     guard let listOfArray = data as? Array<Dictionary<String, Any>>  else {
                         return .error
                     }
                     let listOfCarModels = listOfArray.compactMap({ dict -> CarModel? in
-                        let carModel = CarModel.parse(from: dict)
-                        return carModel
+                        CarModel.parse(from: dict)
                     })
                     guard let nonEmpty = listOfCarModels.convertToNonEmptyArray() else {
                         return .error

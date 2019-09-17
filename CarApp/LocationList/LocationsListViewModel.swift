@@ -78,7 +78,11 @@ private extension LocationsListViewModel {
                      break
                  case .success(let listOfCars):
                     self.viewEffect.accept(.success)
-                    self.coordinator.showCarList(models: listOfCars, locationModel: locationModel, animated: true)
+                    self.coordinator.showCarList(
+                        models: listOfCars,
+                        locationModel: locationModel,
+                        animated: true
+                    )
                  }
              })
              .disposed(by: disposeBag)

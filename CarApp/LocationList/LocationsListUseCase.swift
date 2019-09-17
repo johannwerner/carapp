@@ -28,8 +28,7 @@ extension LocationsListUseCase {
                         return .error
                     }
                     let listOfCarModels = listOfArray.compactMap({ dict -> LocationCarModel? in
-                        let carModel = LocationCarModel.parse(from: dict)
-                        return carModel
+                        LocationCarModel.parse(from: dict)
                     })
                     guard let nonEmptyArray = listOfCarModels.convertToNonEmptyArray() else {
                         return .error

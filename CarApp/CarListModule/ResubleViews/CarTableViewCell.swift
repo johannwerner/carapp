@@ -90,15 +90,17 @@ private extension CarTableViewCell {
 final private class LicensePlateView: UIView {
     // MARK: - Properties
     private var licensePlateLabel = UILabel()
-    private var text: String?
+    private var text: String
     
     // MARK: - Life Cycle
     override init(frame: CGRect) {
+        text = ""
         super.init(frame: frame)
         initUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        text = ""
         super.init(coder: aDecoder)
         initUI()
     }
@@ -107,14 +109,19 @@ final private class LicensePlateView: UIView {
 // MARK: - Accessed outside of LicensePlateView
 //  Private but accessed outside side of LicensePlateView
 extension LicensePlateView {
-    func setTitle(_ title: String?) {
+    func setTitle(_ title: String) {
         licensePlateLabel.text = title
     }
 }
 
 // MARK: - Private
 private extension LicensePlateView {
-    
+    private var circleSize: CGSize {
+        CGSize(
+            width: 3,
+            height: 3
+        )
+    }
     // Private is included here to restrict access only to LicensePlateView
     private func initUI() {
         createCircleViews()
@@ -125,7 +132,7 @@ private extension LicensePlateView {
         for index in 0...3 {
             let circleView = CircleView()
             addSubview(circleView)
-            circleView.autoSetDimensions(to: CGSize(width: 2, height: 2))
+            circleView.autoSetDimensions(to: circleSize)
             
             switch index {
             case 0, 1:

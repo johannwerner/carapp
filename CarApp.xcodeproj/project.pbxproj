@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D08343B8AF355143F139E21 /* Pods_CarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A88F916B0471506DEF1627 /* Pods_CarAppTests.framework */; };
+		93119AFA232A96160088C366 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93119AF9232A96160088C366 /* AppViewController.swift */; };
 		931E403A2327D860008C0490 /* NonEmpty+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E402F2327D85F008C0490 /* NonEmpty+Collection.swift */; };
 		931E403B2327D860008C0490 /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40302327D85F008C0490 /* NonEmpty.swift */; };
 		931E403C2327D860008C0490 /* NonEmpty+BidirectionalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931E40312327D85F008C0490 /* NonEmpty+BidirectionalCollection.swift */; };
@@ -91,6 +92,7 @@
 		19D42DD796D2884C76CD2E46 /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3041E4EEC5A95DA649A26FFF /* Pods-CarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.release.xcconfig"; path = "Target Support Files/Pods-CarApp/Pods-CarApp.release.xcconfig"; sourceTree = "<group>"; };
 		798A147854C701D34FD2C115 /* Pods_CarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93119AF9232A96160088C366 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		931E402F2327D85F008C0490 /* NonEmpty+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+Collection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+Collection.swift"; sourceTree = SOURCE_ROOT; };
 		931E40302327D85F008C0490 /* NonEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonEmpty.swift; path = CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty.swift; sourceTree = SOURCE_ROOT; };
 		931E40312327D85F008C0490 /* NonEmpty+BidirectionalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NonEmpty+BidirectionalCollection.swift"; path = "CarApp/SupportingFiles/Foundation/NonEmpty/NonEmpty+BidirectionalCollection.swift"; sourceTree = SOURCE_ROOT; };
@@ -347,6 +349,8 @@
 				9334C0D02306FA0B00F21977 /* Async.swift */,
 				9334C0D12306FA0B00F21977 /* ObservableType.swift */,
 				93DAFA18231DC12A005E23F9 /* ViewController.swift */,
+				93119AF9232A96160088C366 /* AppViewController.swift */,
+				938707AD2328EE1E00F2ED31 /* UIAplication+Window.swift */,
 				932A78F52326D82D00BB8DFD /* Combine+UIKit.swift */,
 			);
 			path = SupportingFiles;
@@ -367,7 +371,6 @@
 				9334C0C82306FA0B00F21977 /* Decodable+Utils.swift */,
 				9334C0C92306FA0B00F21977 /* String+CarApp.swift */,
 				9334C0CA2306FA0B00F21977 /* Array+CarApp.swift */,
-				938707AD2328EE1E00F2ED31 /* UIAplication+Window.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				9334C10923080BF300F21977 /* IntroductionModuleCoordinator.swift in Sources */,
 				931E40442327D860008C0490 /* NonEmpty+Dictionary.swift in Sources */,
 				931E40402327D860008C0490 /* NonEmpty+Array.swift in Sources */,
+				93119AFA232A96160088C366 /* AppViewController.swift in Sources */,
 				9334C0F32306FA0B00F21977 /* Decodable+Utils.swift in Sources */,
 				9334C0EF2306FA0B00F21977 /* MapViewConfigurator.swift in Sources */,
 				9334C0EB2306FA0B00F21977 /* MapViewInteractor.swift in Sources */,
@@ -735,7 +739,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -790,7 +794,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

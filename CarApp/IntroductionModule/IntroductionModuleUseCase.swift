@@ -27,8 +27,7 @@ extension IntroductionModuleUseCase {
                         return .error
                     }
                     let listOfObjects = listOfArray.compactMap({ dict -> IntroductionLocationModel? in
-                        let model = IntroductionLocationModel.parse(from: dict)
-                        return model
+                        IntroductionLocationModel.parse(from: dict)
                     })
                     guard let nonEmptyArray = listOfObjects.convertToNonEmptyArray() else {
                         return .error

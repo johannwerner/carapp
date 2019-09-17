@@ -3,7 +3,7 @@ import RxCocoa
 
 /// An introduction to my coding challenge
 /// - Requires: `RxSwift`, `RxCocoa`
-final class IntroductionModuleViewController: UIViewController {
+final class IntroductionModuleViewController: AppViewController {
     
     // MARK: Dependencies
     private let viewModel:  IntroductionModuleViewModel
@@ -16,7 +16,6 @@ final class IntroductionModuleViewController: UIViewController {
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
     private let activityIndicator = UIActivityIndicatorView()
-    
     
     @Published var password: String = ""
     
@@ -110,7 +109,7 @@ private extension  IntroductionModuleViewController {
         titleLabel.text = IntroductionConstants.titleLabelText
     }
     
-    /// - Requires: setUpTitleLable to be called first
+    /// - Requires: setUpTitleLabel to be called first
     func setUpSubtitleLable() {
         view.addSubview(subtitleLabel)
         subtitleLabel.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -129,19 +128,21 @@ private extension  IntroductionModuleViewController {
     }
     
     func startLoadingAnimations() {
-        self.activityIndicator.startAnimating()
+        activityIndicator.startAnimating()
         primaryButton.setTitle(
             "",
             for: .normal
         )
+        activityView.showView()
     }
     
     func stopLoadingAnimations() {
-        self.activityIndicator.stopAnimating()
+        activityIndicator.stopAnimating()
         primaryButton.setTitle(
             "introduction_primary_button".localizedString(),
             for: .normal
         )
+        activityView.hideView()
     }
 }
 

@@ -10,7 +10,6 @@ final class LocationsListCoordinator {
     
     // MARK: Tooling
   
-    
     // MARK: - Life cycle
     
     init(
@@ -43,30 +42,51 @@ extension LocationsListCoordinator {
 
 extension LocationsListCoordinator {
 
-    func showCarList(models: NonEmptyArray<LocationCarModel>, locationModel: LocationModel, animated: Bool) {
-        let configurator = CarListConfigurator(carListInteractor: CarListInteractorApi(location: locationModel.name))
-        let coordinator = CarListCoordinator(
-            navigationController: navigationController,
-            configurator: configurator
-        )
-        let carModels = models.map { locationCarModel -> CarModel in
-            CarModel(locationCarModel: locationCarModel)
-        }
-        coordinator.showCarList(
-            models: carModels,
+    func showCarList(
+        models: NonEmptyArray<LocationCarModel>,
+        locationModel: LocationModel,
+        animated: Bool
+    ) {
+        
+        carListCoordinator.showCarList(
+            models: models.convert(),
             locationName: locationModel.name,
             animated: animated
         )
     }
 }
 
+// MARK: - Navigation To CarList
+private extension LocationsListCoordinator {
+    var carListConfigurator: CarListConfigurator {
+        CarListConfigurator(carListInteractor: CarListInteractorApi())
+    }
+    
+    var carListCoordinator: CarListCoordinator {
+        CarListCoordinator(
+            navigationController: navigationController,
+            configurator: carListConfigurator
+        )
+    }
+}
+
+// MARK: - Convert
+private extension NonEmptyArray where Iterator.Element == LocationCarModel {
+    func convert() -> NonEmptyArray<CarModel> {
+        map { model -> CarModel in
+            CarModel(locationCarModel: model)
+        }
+    }
+}
+
+// MARK: - CarModel
 private extension CarModel {
     init(locationCarModel: LocationCarModel) {
         self = CarModel(
             numberPlate: locationCarModel.numberPlate,
             vin: locationCarModel.vin,
             model: locationCarModel.model,
-            fuel: locationCarModel.fuel,
+            fuel: 0,
             position: locationCarModel.position
         )
     }

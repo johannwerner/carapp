@@ -46,10 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func startApp() {
+        showFirstView()
+    }
+    
+    func showFirstView() {
         let startNavigationController = createNavigationController
-        startNavigationController.isNavigationBarHidden = true
-        makeNavigationControllerMain(navigationController: startNavigationController)
-        showIntroduction(navigationController: startNavigationController)
+         startNavigationController.isNavigationBarHidden = true
+         makeNavigationControllerMain(navigationController: startNavigationController)
+         showIntroduction(navigationController: startNavigationController)
     }
     
     var createNavigationController: UINavigationController {
@@ -60,7 +64,7 @@ private extension AppDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         self.window = window
-        self.window?.rootViewController = navigationController
+        window.rootViewController = navigationController
     }
     
     func showIntroduction(navigationController: UINavigationController) {

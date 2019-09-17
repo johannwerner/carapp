@@ -102,10 +102,7 @@ extension CarListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.className, for: indexPath)
-        guard let carListCell = cell as? CarTableViewCell else {
-            assertionFailure("carListCell is nil")
-            return cell
-        }
+        let carListCell = cell as! CarTableViewCell
         let carModel = viewModel.modelForIndexPath(index: indexPath.row)
         carListCell.fill(with: carModel)
         return carListCell

@@ -4,7 +4,6 @@ import RxAlamofire
 /// - Requires:
 final class IntroductionModuleInteractorApi: IntroductionModuleInteractor {}
 
-
 extension IntroductionModuleInteractorApi {
     // MARK: - Internal
     

@@ -6,25 +6,20 @@ import RxAlamofire
 final class CarListInteractorApi: CarListInteractor {
     
     // MARK: - Properties
-    private var location: String
     
     // MARK: Dependencies
     
     // MARK: - Life cycle
-
-    init(location: String) {
-        self.location = location
-    }
 }
 
 extension CarListInteractorApi {
     // MARK: - Internal
     
-    func getListOfCarsForLocation() -> Observable<Async<Any>> {
+    func getListOfCarsForLocation(location: String) -> Observable<Async<Any>> {
         RxAlamofire
             .requestJSON(
                 .get,
-                 url,
+                 url(location),
                  parameters: nil
             )
             .flatMap { (response, json) -> Observable<Any> in
@@ -34,7 +29,7 @@ extension CarListInteractorApi {
 }
 
 private extension CarListInteractorApi {
-    var url: String {
+    func url(_ location: String) -> String {
         String(format: CarListConstants.carListUrl, location)
     }
 }
